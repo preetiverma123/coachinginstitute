@@ -5,24 +5,32 @@
     <div class="col-md-8">
       <div class="slider-left">
         <div class="owl-carousel" id="slider_area">
-          <div class="item">
+         <!--  <div class="item">
             <img src="assets/uploads/slider/banner2.jpg" class="img-responsive" alt="slider">
-            <div class="overlay"></div>
-            <!-- <?php $slider_str = ''; foreach($sliders as $obj){ ?>
-              <?php $slider_str .= '"assets/uploads/slider/'.$obj->image.'"'.','; ?>
+            <div class="overlay"></div> -->
+            <?php $slider_str = ''; 
+            foreach($sliders as $obj){ ?>
+              <?php $slider_str = "assets/uploads/slider/".$obj->image; 
+
+
+              ?>
+                <div class="item">
+                  <img src="<?php echo  $slider_str;?>" class="img-responsive" alt="slider">
+                  <div class="overlay"></div>
+                </div>
             <?php } ?>
-          <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
+         <!--  <div id="demo-1" data-zs-src='[<?php echo rtrim($slider_str, ','); ?>]' data-zs-overlay="dots">
               <div class="demo-inner-content"></div>
           </div>  -->
-            </div>
-            <div class="item">
+           
+       <!--      <div class="item">
               <img src="assets/uploads/slider/slider-banner.jpg" class="img-responsive" alt="slider">
               <div class="overlay"></div>
             </div>
              <div class="item">
               <img src="assets/uploads/slider/home-slider-1523271646-sms.jpg" class="img-responsive" alt="slider">
               <div class="overlay"></div>
-            </div>
+            </div> -->
           </div>
           </div>
         </div>
@@ -99,19 +107,20 @@
                         <span>Directors's Message</span>
                     </h2>
                 </div> 
-                <img src="assets/uploads/page/<?php echo $mdmessage->page_image;?>" width="200px" height="210px" alt="director">
-                <h4><?php echo $mdmessage->page_title; ?></h4>
+                <img src="assets/uploads/page/<?php echo $director_message->page_image;?>" width="200px" height="210px" alt="director">
+
+                <h4><?php echo $director_message->page_title; ?></h4>
               </div>
               <div class="message-content">
                 <p>
                 <?php $this->load->helper('text');
-                $desc= strip_tags($mdmessage->page_description);
+                $desc= strip_tags($director_message->page_description);
                 echo word_limiter($desc,15); ?>
                 </p>
               </div>
               <div class="text-center btn_view pb-4">
                 <!-- <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a> -->
-                 <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                 <a href="<?php echo site_url('about/'.$director_message->page_slug); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
 
@@ -122,14 +131,14 @@
                       <span>Executive's Message</span>
                   </h2>
                 </div> 
-               <img src="assets/uploads/page/<?php echo $principal_message->page_image;?>" width="200px" height="210px" alt="director">
-                <h4><?php echo $principal_message->page_title; ?></h4>
+               <img src="assets/uploads/page/<?php echo $executive_message->page_image;?>" width="200px" height="210px" alt="director">
+                <h4><?php echo $executive_message->page_title; ?></h4>
               </div>
               <div class="message-content">
                 <p>
                 <?php 
                 $this->load->helper('text');
-                $desc= strip_tags($principal_message->page_description);
+                $desc= strip_tags($executive_message->page_description);
                 echo word_limiter($desc,15);
 
                 ?>
@@ -137,7 +146,7 @@
               </div>
               <div class="text-center btn_view pb-4">
                 <!-- <a href="<?php echo site_url('about'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a> -->
-                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="<?php echo site_url('about/'.$executive_message->page_slug); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
           </div>
@@ -209,14 +218,14 @@
     </div>
     <div class="gallerydiv">
       <div class="grid-sizer"></div>
-     <!--  <?php if (isset($galleries) && !empty($galleries)) { ?>
+      <?php if (isset($galleries) && !empty($galleries)) { ?>
         <?php foreach($galleries as $obj){?>
           <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
             <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
           </div>
         <?php }?>
-      <?php }?> -->
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
+      <?php }?>
+  <!--     <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
         <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
       </div>
       <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
@@ -242,7 +251,7 @@
       </div>
       <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
         <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
-      </div>
+      </div> -->
      
      
     </div>
@@ -374,7 +383,7 @@
             <i class="ti-user"></i>
           </div>
           <div class="fact-text">
-            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($employees);?>" data-speed="60" data-refresh-interval="50"><?php echo count($employees);?></span>
+            <span class="goeducation-counter js-counter" data-from="0" data-to="<?php echo count($employees);?>" data-speed="60" data-refresh-interval="50">3000</span>
             <!-- <h2><?php echo count($employees);?></h2> -->
             <p>Selected students</p>
           </div>
@@ -436,35 +445,63 @@
                             <span><?php echo $obj->responsibility; ?></span>
                         </div>
                     </div> -->
+              <?php foreach ($teachers as $key => $obj) { ?>
+               
                   <div class="team-item">
                     <div class="team-img">
-                      <img src="assets/images/team3.jpg" alt="team Image">
+                      <?php  if($obj->photo != ''){ ?>
+                        <img src="<?php echo UPLOAD_PATH; ?>/teacher-photo/<?php echo $obj->photo; ?>" alt="team Image">
+                      <?php }else{ ?>
+                        <img src="<?php echo IMG_URL; ?>/default-user.png" alt="team Image" width="120" /> 
+                      <?php } ?>
+                     <!--  <img src="assets/images/team3.jpg" alt="team Image"> -->
                       <div class="normal-text">
-                        <h3 class="team-name">ABD Rashid Khan</h3>
-                        <span class="subtitle">Vice Chancellor</span>
+                        <h3 class="team-name"><?php echo $obj->name; ?></h3>
+                        <span class="subtitle"><?php echo $obj->responsibility; ?></span>
                       </div>
                     </div>
                     <div class="team-content">
                       <div class="overly-border"></div>
                         <div class="display-table">
                           <div class="display-table-cell">
-                          <h3 class="team-name"><a href="javascript:void(0);">ABD Rashid Khan</a></h3>
-                          <span class="team-title">Vice Chancellor</span>
-                          <p class="team-desc">Entrusted with planning, implementation and evaluation.</p>
+                          <h3 class="team-name"><a href="javascript:void(0);"><?php echo $obj->name; ?></a></h3>
+                          <span class="team-title"><?php echo $obj->responsibility; ?></span>
+                           <?php  if($obj->other_info != ''){ ?>
+                        <p class="team-desc"><?php echo $obj->other_info; ?></p>
+                      <?php } ?>
+                   
+                         
                           <div class="team-social">
-                            <a href="javascript:void(0);" class="social-icon"><i class="fa fa-facebook"></i></a>
+                             <?php if($obj->facebook_url){ ?>
+                                <a class="social-icon"  target="_blank" href="<?php echo $obj->facebook_url; ?>"><i class="fa fa-facebook"></i></a>
+                                <?php } ?>
+                                <?php if($obj->linkedin_url){ ?>
+                                <a class="social-icon"  target="_blank" href="<?php echo $obj->linkedin_url; ?>"><i class="fa fa-linkedin"></i></a>
+                                <?php } ?>
+                                <?php if($obj->google_plus_url){ ?>
+                                <a class="social-icon" target="_blank" href="<?php echo $obj->google_plus_url; ?>"><i class="fa fa-google-plus"></i></a>
+                                <?php } ?>
+                              
+                                <?php if($obj->twitter_url){ ?>
+                                <a class="social-icon"  target="_blank" href="<?php echo $obj->twitter_url; ?>"><i class="fa fa-twitter"></i></a>
+                                <?php } ?>
+                                <?php if($obj->youtube_url){ ?>
+                                <a class="social-icon"  target="_blank" href="<?php echo $obj->youtube_url; ?>"><i class="fa fa-youtube"></i></a>
+                                <?php } ?>
+                            <!-- <a href="javascript:void(0);" class="social-icon"><i class="fa fa-facebook"></i></a>
                             <a href="javascript:void(0);" class="social-icon"><i class="fa fa-google-plus"></i></a>
                             <a href="javascript:void(0);" class="social-icon"><i class="fa fa-twitter"></i></a>
-                            <a href="javascript:void(0);" class="social-icon"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="javascript:void(0);" class="social-icon"><i class="fa fa-pinterest-p"></i></a> -->
                           </div>
                           </div>
                         </div>
                       </div>
                     </div>
-
+               
+              <?php }?>
 
                   <!-- 2 team -->
-                  <div class="team-item">
+                <!--   <div class="team-item">
                     <div class="team-img">
                       <img src="assets/images/team2.jpg" alt="team Image">
                       <div class="normal-text">
@@ -488,11 +525,11 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
 
                     <!-- 3 team -->
 
-                     <div class="team-item">
+                    <!--  <div class="team-item">
                     <div class="team-img">
                       <img src="assets/images/team1.jpg" alt="team Image">
                       <div class="normal-text">
@@ -516,13 +553,13 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
             <!-- <?php } ?> -->
           <!-- <?php } ?> -->
           </div>
          <div class="text-center btn_view pb-4">
                 <!-- <a href="<?php echo site_url('teachers'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a> -->
-                <a href="javascript:void(0);" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
+                <a href="<?php echo site_url('teachers'); ?>" class="btn btn-sm btn-lng btn-outline-dark">View More</a>
               </div>
             </div>
          

@@ -30,12 +30,12 @@
                             <li><a href="javascript:void(0);">Apply Online</a></li>
                             <li>|</li>
                             <?php if (logged_in_user_id()) { ?>       
-                            <li><a href="javascript:void(0);"><?php echo $this->lang->line('dashboard'); ?></a></li>
+                            <li><a href="<?php echo site_url('dashboard'); ?>"><?php echo $this->lang->line('dashboard'); ?></a></li>
                             <li>|</li>
-                            <li><a href="javascript:void(0);"><?php echo $this->lang->line('logout'); ?></a></li>
+                            <li><a href="<?php echo site_url('auth/logout'); ?>"><?php echo $this->lang->line('logout'); ?></a></li>
                             <?php }else{ ?>
 
-                            <li><a href="javascript:void(0);"><?php echo $this->lang->line('login'); ?></a></li>
+                            <li><a href="<?php echo site_url('login'); ?>"><?php echo $this->lang->line('login'); ?></a></li>
 
                             <?php } ?>
                         </ul>
@@ -81,22 +81,22 @@
                         </nav> -->
                         <nav>
                             <ul class="mainmenu" id="mainmenu">
-                                <li class="active"><a href="javascript:void(0);"><?php echo $this->lang->line('home'); ?></a></li>
+                                <li class="active"><a href="<?php echo site_url(); ?>"><?php echo $this->lang->line('home'); ?></a></li>
                                 <li><a href="javascript:void(0);" class="hidemenu"><?php echo $this->lang->line('announcement'); ?> <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
-                                        <li><a href="javascript:void(0);"><?php echo $this->lang->line('news'); ?></a></li>
-                                        <li><a href="javascript:void(0);"><?php echo $this->lang->line('notice'); ?></a></li>
-                                        <li><a href="javascript:void(0);"><?php echo $this->lang->line('holiday'); ?></a></li>
+                                        <li><a href="<?php echo site_url('news'); ?>"><?php echo $this->lang->line('news'); ?></a></li>
+                                        <li><a href="<?php echo site_url('notice'); ?>"><?php echo $this->lang->line('notice'); ?></a></li>
+                                        <li><a href="<?php echo site_url('holiday'); ?>"><?php echo $this->lang->line('holiday'); ?></a></li>
                                     </ul>
                                 </li>
                                 <!-- <li><a href="javascript:void(0);"><?php echo $this->lang->line('about'); ?></a></li> -->
                                 <!-- about -->
                                 <li><a href="javascript:void(0);" class="hidemenu">About Us <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
-                                        <li><a href="javascript:void(0);">Origin</a></li>
-                                        <li><a href="javascript:void(0);">Director's Message</a></li>
-                                        <li><a href="javascript:void(0);">Success Story</a></li>
-                                        <li><a href="javascript:void(0);">Why Origin</a></li>
+                                        <li><a href="<?php echo site_url('about/origin'); ?>">Origin</a></li>
+                                        <li><a href="<?php echo site_url('about/director-message'); ?>">Director's Message</a></li>
+                                        <li><a href="<?php echo site_url('about/success-story'); ?>">Success Story</a></li>
+                                        <li><a href="<?php echo site_url('about/why-origin'); ?>">Why Origin</a></li>
                                     </ul>
                                 </li>
                                 <!-- end about -->
@@ -125,12 +125,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="javascript:void(0);"><?php echo $this->lang->line('gallery'); ?></a></li>
+
+                                <li><a href="<?php echo site_url('galleries'); ?>"><?php echo $this->lang->line('gallery'); ?></a></li>
                                 <li><a href="javascript:void(0);">Results</a></li>
                                 <!-- <li><a href="javascript:void(0);"><?php echo $this->lang->line('teacher'); ?></a></li>
                                 <li><a href="javascript:void(0);"><?php echo $this->lang->line('staff'); ?></a></li> -->
                                
-                                <li><a href="javascript:void(0);"><?php echo $this->lang->line('contact_us'); ?></a></li>
+                                <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('contact_us'); ?></a></li>
                                 
                             </ul>
                             <ul class="mainmenu-toggle" id="mainmenu-toggle">

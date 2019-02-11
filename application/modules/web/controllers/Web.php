@@ -38,9 +38,9 @@ class Web extends CI_Controller {
     public function index() {
 
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
-        $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+        $this->data['director_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'director-message'), '', '', '', 'id', 'ASC');
 
-        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');
+        $this->data['executive_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'executive-message'), '', '', '', 'id', 'ASC');
 
         $this->data['notices'] = $this->web->get_notice_list(3);
         $this->data['events'] = $this->web->get_event_list(3);
@@ -344,11 +344,14 @@ class Web extends CI_Controller {
     * @param           : null
     * @return          : null 
     * ********************************************************** */
-    public function about() {
+    public function about($slug) {
         
-        $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
+       /* $this->data['mdmessage'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'md-message'), '', '', '', 'id', 'ASC');
         
-        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');
+        $this->data['principal_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'principal-message'), '', '', '', 'id', 'ASC');*/
+
+         $this->data['about'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>$slug), '', '', '', 'id', 'ASC');
+
         $this->data['list'] = TRUE;
         $this->layout->title($this->lang->line('about_us') . ' ' . $this->lang->line('school'). ' | ' . SMS);
         $this->layout->view('about', $this->data);

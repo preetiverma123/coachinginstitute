@@ -175,15 +175,28 @@
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="page_title">
 
-                                     <?php if($page->id=='4'){
+                                     <?php if($page->page_slug=='director-message'){
 
 
-                                        echo 'MD Name' ?> <span class="required">*</span>
-                                    <?php } elseif($page->id=='5'){
+                                        echo 'Director Name' ?> <span class="required">*</span>
+                                    <?php } elseif($page->page_slug=='executive-message'){
 
-                                         echo 'Principal Name' ?> <span class="required">*</span>
+                                         echo 'Executive Name' ?> <span class="required">*</span>
                                     <?php
-                                        }else
+                                    }
+                                    else if($page->page_slug=='origin'){
+                                         echo 'Origin';?> <span class="required">*</span>    
+                                    <?php    
+                                    }else if($page->page_slug=='why-origin'){
+                                          echo 'Why Origin';?> <span class="required">*</span>    
+                                    <?php    
+        
+                                    }else if($page->page_slug=='success-story'){
+                                          echo 'Success Story';?> <span class="required">*</span>    
+                                    <?php    
+                                    }
+                                        else
+                                    
                                     {
                                      echo $this->lang->line('page'); 
                                      echo $this->lang->line('title'); ?> 
@@ -253,11 +266,20 @@
                                     <label class="col-md-3 col-sm-3 col-xs-4">
                                     <?php 
 
-                                    if($page->id=='4')
+                                    if($page->page_slug=='director-message')
                                     {
-                                        echo 'MD Name'; 
-                                    }elseif ($page->id=='5') {
-                                        echo 'Principal Name';
+                                        echo 'Director Name'; 
+                                    }elseif ($page->page_slug=='executive-message') {
+                                        echo 'Executive Name';
+                                    }
+                                    elseif ($page->page_slug=='origin') {
+                                        echo 'Origin';
+                                    }
+                                    elseif ($page->page_slug=='why-origin') {
+                                        echo 'Why Origin';
+                                    }
+                                    elseif ($page->page_slug=='success-story') {
+                                        echo 'Success Story';
                                     }
                                     else{
                                         echo $this->lang->line('page'); 
