@@ -100,6 +100,42 @@ ul.style-course li {
 .apply-form form {
     padding: 40px;
 }
+.result-section{
+    padding: 60px 0;
+    background: #f2f0f0;
+}
+.resultWrap{
+    background-color: #fff;
+    box-shadow: 0 2px 5px 0 #00000014;
+    margin-bottom: 30px;
+}
+.resultWrap:hover{
+    box-shadow:-14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
+}
+.student_name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.result-img {
+    height: 220px;
+}
+.result-info>div {
+    padding-bottom: 5px;
+}
+.result-info{
+    padding: 10px;
+    text-align: center;
+}
+.spanresult{
+    text-transform: uppercase;
+    padding-right: 10px;
+}
+.result-img img{
+    height: 220px;
+    border: 2px solid #f3861f;
+    width: 100%;
+}
 .pd-all{
     padding: 60px 0;
 }

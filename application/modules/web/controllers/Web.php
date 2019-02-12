@@ -159,7 +159,14 @@ class Web extends CI_Controller {
         $this->layout->title($this->lang->line('news') . ' | ' . SMS);
         $this->layout->view('news', $this->data);
     }
-    
+
+    public function competition_results() {
+
+        $this->data['competition_results'] = $this->web->get_list('competition_results', array('status'=>1), '', '', '', 'id', 'DESC'); 
+        $this->data['list'] = TRUE;
+        $this->layout->title($this->lang->line('results') . ' | ' . SMS);
+        $this->layout->view('competition_results', $this->data);
+    }
     
     /*****************Function news**********************************
     * @type            : Function
