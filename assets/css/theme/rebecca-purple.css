@@ -272,7 +272,30 @@ ul.style-course li {
 .rs-services-style1 .services-icon:hover{
     background-color: #f3861f;
 }
-
+.about-img{
+    height: 350px;
+    width: 100%;
+}
+.about-img img{
+    height: 340px;
+    width: 100%;
+}
+.about-desc {
+    margin-bottom: 30px;
+}
+.about-desc h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.our-history{
+    background-color: #f3861f;
+}
+.our-history h3{
+    color: #fff;
+    padding: 5px;
+}
 /*-----------our team---------------*/
 .overly-border::before {
     border-top: 5px solid #f3861f;
