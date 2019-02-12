@@ -96,6 +96,10 @@ ul.style-course li {
     max-width: 630px;
     margin: 0 auto;
 }
+.applybtn button {
+    background: #f3861f;
+    border: 1px solid #f3861f;
+}
 .applySection{
     padding: 60px 0;
 }

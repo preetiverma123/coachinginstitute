@@ -400,10 +400,57 @@ class Web extends CI_Controller {
     
     public function apply() {
 
-       
+        $query = $this->db->query("SELECT * from courses");
+        $courses= $query->result();
+            
+
+    
+        $this->data['courses'] = $courses;
         $this->data['list'] = TRUE;
         $this->layout->title('apply-online' . ' | ' . SMS);
         $this->layout->view('apply-online', $this->data);
+    }
+
+     public function addApplication() {
+
+      // $this->load->model('Career_Model', 'career', true);
+
+        if ($_POST) {
+            $this->_prepare_apply_validation();
+
+            if ($this->form_validation->run() === TRUE) {
+               
+                $items = array();
+                $items[] = 'name';
+                $items[] = 'fathers_name';
+                $items[] = 'email';
+                $items[] = 'phone';
+                $items[] = 'course';
+
+                $data = elements($items, $_POST);
+               
+             
+
+                $insert_id = $this->db->insert('applications', $data);
+                if ($insert_id) {
+                    success($this->lang->line('insert_success'));
+                    redirect(site_url());
+                } else {
+                    error($this->lang->line('insert_failed'));
+                    redirect(site_url());
+                }
+            } else {
+
+                $this->data['post'] = $_POST;
+               
+            }
+
+        }
+     
+       
+        $this->data['add'] = TRUE;
+        $this->layout->title($this->lang->line('add') . ' ' . $this->lang->line('career') . ' | ' . SMS);
+        $this->layout->view('index', $this->data);
     }
     /*****************Function About**********************************
     * @type            : Function
@@ -595,6 +642,20 @@ class Web extends CI_Controller {
         $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required|valid_email');
 //|callback_email,|callback_resume
         $this->form_validation->set_rules('resume', $this->lang->line('resume'), 'trim|required');
+
+    }
+
+     private function _prepare_apply_validation() {
+        $this->load->library('form_validation');
+        $this->form_validation->set_error_delimiters('<div class="error-message" style="color: red;">', '</div>');
+
+        $this->form_validation->set_rules('name', $this->lang->line('name'), 'trim|required');
+         $this->form_validation->set_rules('fathers_name','Fathers name', 'trim|required');
+        
+        $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|valid_email');
+        $this->form_validation->set_rules('phone', $this->lang->line('phone'), 'trim|required');
+//|callback_email,|callback_resume
+        $this->form_validation->set_rules('course', 'course', 'trim|required');
 
     }
 }
