@@ -23,6 +23,54 @@ class Web extends CI_Controller {
         $this->data['settings'] = $this->web->get_single('settings', array('status' => 1));
         $this->data['about'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'about-us'), '', '', '', 'id', 'ASC');
         $this->data['theme'] = $this->web->get_single('themes', array('is_active' => 1));
+        $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
+        $this->data['director_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'director-message'), '', '', '', 'id', 'ASC');
+
+        $this->data['executive_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'executive-message'), '', '', '', 'id', 'ASC');
+
+        $this->data['notices'] = $this->web->get_notice_list(3);
+        $this->data['events'] = $this->web->get_event_list(3);
+        $this->data['teachers'] = $this->web->get_teacher_list();
+        $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
+
+        ///StudentsCount
+        $this->db->select('*');
+        $this->db->from('students');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $students = $query->row_array();
+
+            
+        }
+        $this->data['students'] = $students;
+
+        ////Subjects Count
+        $this->db->select('*');
+        $this->db->from('sections');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $sections = $query->row_array();
+
+            
+        }
+        $this->data['sections'] = $sections;
+
+        ////Employees Count
+        $this->db->select('*');
+        $this->db->from('employees');
+        $query = $this->db->get();
+
+        if ( $query->num_rows() > 0 )
+        {
+            $employees = $query->row_array();
+
+            
+        }
+        $this->data['employees'] = $employees;
     }
 
     
@@ -395,6 +443,50 @@ class Web extends CI_Controller {
         $this->layout->title($this->lang->line('contact_us') . ' | ' . SMS);
         $this->layout->view('contact', $this->data);
     }
+
+     public function addCareer() {
+
+      // $this->load->model('Career_Model', 'career', true);
+
+        if ($_POST) {
+            $this->_prepare_career_validation();
+
+            if ($this->form_validation->run() === TRUE) {
+               
+                $items = array();
+                $items[] = 'name';
+                $items[] = 'email';
+                $items[] = 'phone';
+                $items[] = 'resume';
+
+                $data = elements($items, $_POST);
+               
+                if ($_FILES['resume']['name']) {
+                    $data['resume'] = $this->_upload_resume();
+                }
+
+
+                $insert_id = $this->db->insert('career', $data);
+                if ($insert_id) {
+                    success($this->lang->line('insert_success'));
+                    redirect(site_url());
+                } else {
+                    error($this->lang->line('insert_failed'));
+                    redirect(site_url());
+                }
+            } else {
+
+                $this->data['post'] = $_POST;
+               
+            }
+
+        }
+     
+       
+        $this->data['add'] = TRUE;
+        $this->layout->title($this->lang->line('add') . ' ' . $this->lang->line('career') . ' | ' . SMS);
+        $this->layout->view('index', $this->data);
+    }
     
         /*     * ***************Function _send_email**********************************
      * @type            : Function
@@ -403,6 +495,35 @@ class Web extends CI_Controller {
      * @param           : $data array(); 
      * @return          : null 
      * ********************************************************** */
+
+        private function _upload_resume() {
+
+        
+        $resume = $_FILES['resume']['name'];
+        $resume_type = $_FILES['resume']['type'];
+        $return_resume = '';
+
+        if ($resume != "") {
+            if ($resume_type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+                    $resume_type == 'application/msword' || $resume_type == 'text/plain' ||
+                    $resume_type == 'application/vnd.ms-office' || $resume_type == 'application/pdf') {
+
+                $destination = 'assets/uploads/resume/';
+
+                $resume_type = explode(".", $resume);
+                $extension = strtolower($resume_type[count($resume_type) - 1]);
+                $resume_path = 'resume-' . time() . '-sms.' . $extension;
+
+                move_uploaded_file($_FILES['resume']['tmp_name'], $destination . $resume_path);
+
+                // need to unlink previous resume
+              
+                $return_resume = $resume_path;
+            }
+        
+        }
+        return $return_resume;
+    }
 
     private function _send_email() {
 
@@ -444,4 +565,15 @@ class Web extends CI_Controller {
         }
     }
 
+     private function _prepare_career_validation() {
+        $this->load->library('form_validation');
+        $this->form_validation->set_error_delimiters('<div class="error-message" style="color: red;">', '</div>');
+
+        $this->form_validation->set_rules('name', $this->lang->line('name'), 'trim|required');
+        $this->form_validation->set_rules('phone', $this->lang->line('phone'), 'trim|required');
+        $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required|valid_email');
+//|callback_email,|callback_resume
+        $this->form_validation->set_rules('resume', $this->lang->line('resume'), 'trim|required');
+
+    }
 }
