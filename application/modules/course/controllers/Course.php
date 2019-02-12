@@ -65,7 +65,7 @@ class Course extends MY_Controller {
             $this->_prepare_course_validation();
             if ($this->form_validation->run() === TRUE) {
                 $data = $this->_get_posted_course_data();
-
+                $data['status'] =1;
                 $insert_id = $this->courses->insert('courses', $data);
 
                 if ($insert_id) {

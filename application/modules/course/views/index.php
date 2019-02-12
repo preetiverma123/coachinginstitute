@@ -44,8 +44,9 @@
                                     <tr>
                                         <th><?php echo $this->lang->line('sno'); ?></th>
 
-                                        <th><?php echo $this->lang->line('name'); ?></th>
+                                       
                                         <th><?php echo $this->lang->line('photo'); ?></th>
+                                         <th><?php echo $this->lang->line('name'); ?></th>
                                         <th><?php echo $this->lang->line('description'); ?></th>
                                         
                                         <th><?php echo $this->lang->line('action'); ?></th>                                            

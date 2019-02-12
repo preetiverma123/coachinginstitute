@@ -552,3 +552,4 @@ $lang['previous'] = "Previous";
 $lang['last_name'] = "Last Name";
 $lang['admission'] = "Admission";
 $lang['check_at_least_one'] = "Please check at least one checkbox";
+$lang['course'] = "Course";
