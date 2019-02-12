@@ -24,10 +24,10 @@
             <div class="aboutContent">
               <div class="about-desc">
                   <h3>WELCOME TO Origin</h3>      
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <p><?php echo $about->page_title;?></p>
               </div>
               <div class="our-history">
-                <h3>Our History</h3>
+                <!-- <h3>Our History</h3> -->
               </div>
                 <p>
                 <?php echo htmlspecialchars_decode(stripslashes($about->page_description)); ?>

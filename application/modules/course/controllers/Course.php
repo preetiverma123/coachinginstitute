@@ -302,6 +302,7 @@ class Course extends MY_Controller {
     private function _upload_photo() {
 
         $prev_photo = $this->input->post('prev_photo');
+        
         $photo = $_FILES['photo']['name'];
         $photo_type = $_FILES['photo']['type'];
         $return_photo = '';
