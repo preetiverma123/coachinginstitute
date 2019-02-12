@@ -334,6 +334,14 @@ class Web extends CI_Controller {
         $this->layout->title($this->lang->line('terms_and_condition') . ' | ' . SMS);
         $this->layout->view('terms', $this->data);
     }
+
+    public function course() {
+
+       
+        $this->data['list'] = TRUE;
+        $this->layout->title('course' . ' | ' . SMS);
+        $this->layout->view('course', $this->data);
+    }
     
     
     /*****************Function About**********************************
