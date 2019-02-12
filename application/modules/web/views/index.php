@@ -41,6 +41,41 @@
         <div class="scrollDiv scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
           <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 340px;">
             <li class="list-group-item">
+              <i class="fa fa-caret-right"></i>Admission Course
+            
+              <ul class="style-course">
+                <li>
+                  <a href="javascript:void(0);">
+                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b>
+                  <br>
+                  (Class XII<sup>th</sup> passout)
+                </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                  <b> <i class="fa fa-caret-right"></i>NEET/AIIMS</b>
+                  <br>
+                  (Class XII<sup>th</sup> passout)
+                </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                  <b> <i class="fa fa-caret-right"></i>Foundation</b>
+                  <br>
+                  (Class XI<sup>th</sup> & XII<sup>th</sup>)
+                </a>
+                </li>
+                 <li>
+                  <a href="javascript:void(0);">
+                  <b> <i class="fa fa-caret-right"></i>Prefoundation</b>
+                  <br>
+                  (Class VIII<sup>th</sup> & IX<sup>th</sup> & X<sup>th</sup>)
+                </a>
+                </li>
+               
+              </ul>
+            </li>
+           <!--  <li class="list-group-item">
               <i class="fa fa-caret-right"></i>Admission Announcement
             
               <ul class="style-course">
@@ -61,29 +96,7 @@
                   <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
                 </li>
               </ul>
-            </li>
-            <li class="list-group-item">
-              <i class="fa fa-caret-right"></i>Admission Announcement
-            
-              <ul class="style-course">
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-              </ul>
-            </li>
+            </li> -->
          
           </ul>
         </div>
