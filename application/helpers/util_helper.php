@@ -962,7 +962,6 @@ if (!function_exists('has_permission')) {
 
         $ci = & get_instance();
         $role_id = $ci->session->userdata('role_id');
-
         if ($module_slug == '') {
             $module_slug = $operation_slug;
         }
@@ -972,6 +971,7 @@ if (!function_exists('has_permission')) {
         $data = $ci->config->item($operation_slug, $module_slug);
 
         $result = @$data[$role_id];
+
 
         if (!empty($result)) {
             $array = explode('|', $result);

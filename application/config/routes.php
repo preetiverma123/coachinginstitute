@@ -70,8 +70,8 @@ $route['privacy'] = 'web/privacy';
 $route['terms'] = 'web/terms';
 $route['about/(:any)'] = 'web/about/$1';
 $route['login'] = 'welcome';
-$route['course'] = 'web/course';
 $route['apply-online'] = 'web/apply';
+$route['courses'] = 'web/courses';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

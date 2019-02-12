@@ -383,7 +383,7 @@ class Web extends CI_Controller {
         $this->layout->view('terms', $this->data);
     }
 
-    public function course() {
+    public function courses() {
 
        
         $this->data['list'] = TRUE;
