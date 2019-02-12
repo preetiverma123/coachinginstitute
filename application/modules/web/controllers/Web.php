@@ -391,7 +391,13 @@ class Web extends CI_Controller {
         $this->layout->view('course', $this->data);
     }
     
-    
+    public function apply() {
+
+       
+        $this->data['list'] = TRUE;
+        $this->layout->title('apply-online' . ' | ' . SMS);
+        $this->layout->view('apply-online', $this->data);
+    }
     /*****************Function About**********************************
     * @type            : Function
     * @function name   : About

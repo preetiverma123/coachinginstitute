@@ -29,7 +29,7 @@
                         <ul>
                             <li><a href="#careerModal" data-toggle="modal">Career</a></li>
                             <li>|</li>
-                            <li><a href="javascript:void(0);">Apply Online</a></li>
+                            <li><a href="<?php echo site_url('apply-online'); ?>">Apply Online</a></li>
                             <li>|</li>
                             <?php if (logged_in_user_id()) { ?>       
                             <li><a href="<?php echo site_url('dashboard'); ?>"><?php echo $this->lang->line('dashboard'); ?></a></li>

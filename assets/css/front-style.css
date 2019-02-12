@@ -498,7 +498,7 @@ label {
 }
 
 .form-row{
-    float: left;
+    /*float: left;*/
     width: 100%;
 } 
 

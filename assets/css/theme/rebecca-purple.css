@@ -91,6 +91,15 @@ ul.style-course li {
 .contact-form {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
 }
+.apply-form {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+.applySection{
+    padding: 60px 0;
+}
+.apply-form form {
+    padding: 40px;
+}
 .pd-all{
     padding: 60px 0;
 }
