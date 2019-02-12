@@ -64,6 +64,7 @@ $route['gallery-image/(:num)'] = 'web/gallery_image/$1';
 $route['teachers'] = 'web/teachers';
 $route['staff'] = 'web/staff';
 $route['contact'] = 'web/contact';
+$route['career'] = 'web/addCareer';
 $route['admission'] = 'web/admission';
 $route['privacy'] = 'web/privacy';
 $route['terms'] = 'web/terms';
@@ -72,3 +73,4 @@ $route['login'] = 'welcome';
 $route['course'] = 'web/course';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+

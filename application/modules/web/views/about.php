@@ -48,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <?php echo $about->page_description; ?>
+                afdasnflasdnflkads
                 <div class="about_us_page">
                 <div class="row">
                     <h3>Why Choose Us?</h3>
