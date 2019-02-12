@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
-                <div class="contact-form">
+                <div class="contact-form marginContact">
                     <form action="<?php echo site_url('contact'); ?>" method="post" name="contact" id="contact">
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
-                <section class="right-pane">
+                <section class="right-pane marginContact">
                     <h2 class="widget-title"><?php echo $this->lang->line('get_in_touch'); ?></h2> 
                     <div class="row">
                         <div class="col-md-12 col-sm-12">

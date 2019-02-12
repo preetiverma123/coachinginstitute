@@ -27,7 +27,7 @@
 					<h3 class="text-center"><span style="color: #f3861f;">Benefits</span> of Course</h3>
 				</div>
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 marginBox">
                     	<div class="services-item rs-animation-hover">
                     	    <div class="services-icon">
                     	    	<i class="fa fa-american-sign-language-interpreting rs-animation-scale-up"></i>                    	        
@@ -38,7 +38,7 @@
                     	    </div>
                     	</div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 marginBox">
                     	<div class="services-item rs-animation-hover">
                     	    <div class="services-icon">                    	        
                     	        <i class="fa fa-book rs-animation-scale-up"></i>
@@ -49,7 +49,7 @@
                     	    </div>
                     	</div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 marginBox">
                     	<div class="services-item rs-animation-hover">
                     	    <div class="services-icon">
                     	        <i class="fa fa-user rs-animation-scale-up"></i>
@@ -60,7 +60,7 @@
                     	    </div>
                     	</div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-3 col-sm-6 marginBox">
                     	<div class="services-item rs-animation-hover">
                     	    <div class="services-icon">
                     	        <i class="fa fa-graduation-cap rs-animation-scale-up"></i>

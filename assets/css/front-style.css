@@ -912,16 +912,44 @@ button.btn.btn-primary.btn-blue {
 
 .gallery{
     padding: 5px;   
-    float: left;
+    position: relative;
+    /*float: left;*/
     margin-bottom: 30px;
 }
-.gallery:hover{
-    box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+.gallery:hover .overlay-gallery{
+    bottom: 0;
+    opacity: 1;
+    height: 100%;
+    box-shadow: -14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
 }
+.gallery:hover .overlay-gallery .gallery-title{
+    opacity: 1;
+    bottom: 0;
+    height: 100%;
+}
+.overlay-gallery{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    height: 0;
+    bottom: 100%;
+    /*top:0;*/
+    transition: .5s ease-in;
+    background-color: rgba(0,0,0,.5);
+}
+.gallery img {
+    height: 220px;
+}
+
+/*.gallery:hover{
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+}*/
 
 .gallery-title{
     padding: 10px;
-    background: #f9f9f9;
+    opacity: 0;
+    /*background: #f9f9f9;*/
     font-size: 20px;
     color: #736e6e;
     text-align: center;
@@ -1017,7 +1045,12 @@ button.btn.btn-primary.btn-blue {
     margin-bottom: 30px;
     padding-bottom: 43px;
 }
-
+.marginContact{
+    margin-top: 50px;
+}
+.marginBox{
+    margin-bottom: 80px;
+}
 .admission-form{      
     min-height: 500px;
     margin: 0px 10px;

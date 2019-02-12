@@ -14,10 +14,17 @@
                 <?php foreach ($galleries as $obj) { ?>
                     <div class="col-md-4 col-sm-4">
                         <div class="gallery">
+                            
                             <a href="<?php echo site_url('gallery-image/'.$obj->id); ?>">
                                 <img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>" alt="Lights" style="width:100%">
+                                 
+                                <div class="overlay-gallery">
+                                    <div class="gallery-title"><a href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><?php echo $obj->title; ?></a>
+                                    </div>
+                                </div> 
                             </a>
-                            <div class="gallery-title"><a href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><?php echo $obj->title; ?></a></div>                      
+                            
+                                                
                         </div> 
                     </div> 
                 <?php } ?>

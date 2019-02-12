@@ -212,8 +212,9 @@ ul.style-course li {
     transition: all 0.3s ease 0s;
 }
 .rs-services.rs-services-style1 {
-    height: 230px;
+    /*height: 230px;*/
 }
+
 .rs-animation-hover:not(:hover), .rs-animation-hover:not(:hover) [class*='rs-animation-'] {
     -webkit-animation-name: none;
     animation-name: none;
@@ -241,6 +242,7 @@ ul.style-course li {
 }
 .certified-course{
     padding: 60px 0;
+    border-top: 1px solid #ff3115;
 }
 .rs-services-style1 .services-desc {
     text-align: center;
@@ -318,6 +320,9 @@ ul.style-course li {
 .overlay-border:after{
     opacity: 1;
     transform: scale(1);
+}
+.overlay{
+    position: absolute;
 }
 .team-item:hover .team-content {
     opacity: 1;
