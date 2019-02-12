@@ -462,16 +462,8 @@ ul.course-dropdown-sub {
     border-bottom: 2px solid #663399;
 }
 
-.btn-success {
-    color: #fdfdfd;
-    background-color: #663399;
-    border-color: #663399;
-}
 
-.btn-success:hover {
-    background-color: #663399;
-    border-color: #663399;
-}
+
 
 .nav-sm ul.nav.child_menu{
     background: #663399;

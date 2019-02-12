@@ -1051,10 +1051,49 @@ button.btn.btn-primary.btn-blue {
 .marginBox{
     margin-bottom: 80px;
 }
+.career-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.career-modal-head h3{
+    font-size: 22px;
+    padding-left: 10px;
+}
+.career-modal .modal-header {
+    padding: 5px;
+}
+.career-form-modal form{
+    padding: 40px 40px 0;
+    margin-bottom: 30px;
+}
+.career-modal-head img{
+    max-width: 60px;
+}
 .admission-form{      
     min-height: 500px;
     margin: 0px 10px;
     padding: 10px;
+}
+.career-modal .btn-default{
+    border: 1px solid transparent;
+    background-color: transparent;
+    text-align: left;
+    color: #7e7e7e;
+    padding: 0;
+}
+.fileUpload i {
+    color: #7e7e7e !important;
+    font-size: 18px;
+}
+#careerModal button {
+    background: #f3861f;
+    /* padding-left: 10px; */
+    margin-left: 15px;
+    border: 1px solid #f3861f;
+}
+.career-modal .btn-default:hover{
+    background-color: transparent;
 }
 .admission-address{
     text-align: center;
