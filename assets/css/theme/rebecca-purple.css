@@ -185,6 +185,94 @@ ul.style-course li {
     position: relative;
     letter-spacing: 1px;
 }
+.section-course {
+    padding: 60px 0;
+}
+.course-head h2{
+    text-align: left;
+    font-size: 30px;
+    color: #000;
+    line-height: 1.5;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.course-head h3 i{
+    color: #f3861f;
+}
+.course-image{
+    box-shadow: 0 15px 30px 0 #00000019;
+}
+.rs-services-style1 .services-item {
+    background-color: #212121;
+    padding: 25px 17px 17px;
+    box-shadow: 0 4px 2px -2px #000000;
+    z-index: 111;
+    position: relative;
+    top: 70px;
+    transition: all 0.3s ease 0s;
+}
+.rs-services.rs-services-style1 {
+    height: 230px;
+}
+.rs-animation-hover:not(:hover), .rs-animation-hover:not(:hover) [class*='rs-animation-'] {
+    -webkit-animation-name: none;
+    animation-name: none;
+}
+.rs-services-style1 .services-icon {
+    height: 130px;
+    width: 130px;
+    background-color: #212121;
+    line-height: 88px;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+    z-index: -1;
+    font-size: 40px;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: #ff3115;
+    transition: all 0.3s ease 0s;
+}
+.rs-services-style1 .services-icon i {
+    display: inline-block;
+    color: #fff;
+}
+.certified-course{
+    padding: 60px 0;
+}
+.rs-services-style1 .services-desc {
+    text-align: center;
+    margin-top: 6px;
+}
+.rs-services-style1 .services-desc .services-title {
+    position: relative;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 7px;
+    z-index: 10;
+}
+.rs-services-style1 .services-desc p {
+    color: #cccccc;
+    margin-bottom: 0;
+}
+/*.rs-services-style1 {
+    background-color: #f3861f;
+}*/
+.rs-services-style1 .services-item:hover .services-icon i, .rs-services-style1 .services-item:hover .services-desc p{
+    color: #fff !important;
+}
+.rs-services-style1 .services-item:hover {
+    background: #f3861f;
+}
+.rs-services-style1 .services-item:hover .services-icon {
+    background-color: #f3861f;
+}
+.rs-services-style1 .services-icon:hover{
+    background-color: #f3861f;
+}
+
 /*-----------our team---------------*/
 .overly-border::before {
     border-top: 5px solid #f3861f;
