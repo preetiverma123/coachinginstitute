@@ -624,45 +624,7 @@
                     </form>
                 </div>
             </div>
-             <div class="col-lg-6 col-md-6 col-xs-12">
-                <div class="contact-form">
-                    <form enctype="multipart/form-data" action="<?php echo site_url('career'); ?>" method="post" name="career" id="career">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name" class="col-form-label"><?php echo $this->lang->line('name'); ?></label><span class="required">*</span>
-                                <input type="text" class="form-control" id="name" placeholder="<?php echo $this->lang->line('name'); ?>" name="name">
-                                 <div class="help-block"><?php echo form_error('name'); ?></div>
-                            </div>
-                            
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="email" class="col-form-label"><?php echo $this->lang->line('email'); ?></label> 
-                                <input type="email" class="form-control" id="email" placeholder="<?php echo $this->lang->line('email'); ?>" name="email">
-                                <div class="help-block"><?php echo form_error('email'); ?></div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="phone" class="col-form-label"><?php echo $this->lang->line('phone'); ?></label> <span class="required">*</span>
-                                <input type="text" class="form-control" id="phone" placeholder="<?php echo $this->lang->line('phone'); ?>" name="phone">
-                                <div class="help-block"><?php echo form_error('phone'); ?></div>
-                            </div>
-                        </div>  
-                        <div class="form-row">
-                            <div class="form-group col-md-12">
-                              <div class="btn btn-default btn-file">
-                                <i class="fa fa-paperclip"></i> <?php echo $this->lang->line('upload'); ?>
-                                <input  class="form-control col-md-7 col-xs-12"  name="resume"  id="resume" type="file" >
-                              </div>
-                              <div class="text-info"><?php echo $this->lang->line('valid_file_format_doc'); ?></div>
-                              <div class="help-block"><?php echo form_error('resume'); ?></div>
-                            </div>                           
-                        </div>  
-                        <button id="send" type="submit" class="btn btn-success"><?php echo $this->lang->line('submit'); ?></button>                         
-                        <!-- <button type="submit" class="btn btn-primary btn-blue" style="margin-left: 16px;"><?php echo $this->lang->line('submit'); ?></button> -->
-                        
-                    </form>
-                </div>
-            </div>
+             
         </div>
     </div>
 </section>
