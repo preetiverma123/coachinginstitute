@@ -93,6 +93,12 @@ ul.style-course li {
 }
 .apply-form {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+    max-width: 630px;
+    margin: 0 auto;
+}
+.applybtn button {
+    background: #f3861f;
+    border: 1px solid #f3861f;
 }
 .applySection{
     padding: 60px 0;
@@ -103,6 +109,12 @@ ul.style-course li {
 .result-section{
     padding: 60px 0;
     background: #f2f0f0;
+}
+.applybtn button{
+    margin-top: 30px;
+}
+.form-button{
+    margin-top: 20px;
 }
 .resultWrap{
     background-color: #fff;

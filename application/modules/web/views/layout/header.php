@@ -182,8 +182,8 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li>
-                                <li><a href="<?php echo site_url('competition-results'); ?>">Results</a></li>
+                               <!--  <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li> -->
+                                <li><a href="<?php echo 'competition-results'?>">Results</a></li>
                                 <!-- <li><a href="javascript:void(0);"><?php echo $this->lang->line('teacher'); ?></a></li>
                                 <li><a href="javascript:void(0);"><?php echo $this->lang->line('staff'); ?></a></li> -->
                                
