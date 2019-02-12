@@ -561,7 +561,7 @@ define('EDIT', '1');
 define('VIEW', '2');
 define('DELETE', '3');
 
-define('SMS', 'Global - School Management System');
+define('SMS', 'Coaching Institute');
 
 
 

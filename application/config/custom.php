@@ -766,3 +766,4 @@ $config['my_frontend']['slider']['5'] = '0|0|0|0';
 $config['my_payroll']['grade']['5'] = '0|0|0|0';
 $config['my_payroll']['payment']['5'] = '0|0|0|0';
 $config['my_payroll']['history']['5'] = '0|0|0|0';
+
