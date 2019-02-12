@@ -71,6 +71,8 @@ $route['terms'] = 'web/terms';
 $route['about/(:any)'] = 'web/about/$1';
 $route['login'] = 'welcome';
 $route['apply-online'] = 'web/apply';
+$route['competition-results'] = 'web/competition_results';
+
 $route['courses'] = 'web/courses';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
