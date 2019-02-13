@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-5">
-                <h3 class="footer-title"><?php echo $this->lang->line('about'); ?> <?php echo $this->lang->line('school'); ?></h3>
+                <h3 class="footer-title"><?php echo 'Origin Career Institute' ?></h3>
                 <div class="footer-text about_description">
                     <?php echo htmlspecialchars_decode(stripslashes($about->page_description)); ?>
                 </div>

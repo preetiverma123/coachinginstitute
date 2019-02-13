@@ -1329,8 +1329,13 @@ button.btn.btn-primary.btn-blue {
     ul.submenu-course{
         left: 5% !important;
         display: none;
+        height: 200px;
+         overflow-y: scroll;
         width: 90% !important;
         top: 70% !important;
+    }
+    ul.submenu-course .inline-items-menu{
+        float: unset !important;
     }
     .slider_area img{
         height: unset !important;
