@@ -206,7 +206,8 @@ label {
     padding: 1px 0 0;
 }
 .logo img{
-    max-width: 72px;
+    /* padding-top: 4px; */
+    max-width: 62px;
 }
 
 /* Menu Area start  */
@@ -375,6 +376,9 @@ label {
 .owl-carousel .owl-next{
     position: absolute;
     right: 0;
+}
+.course-image img {
+    width: 100%;
 }
 .owl-carousel .owl-prev:before{
     content:"\f053";
@@ -1164,7 +1168,12 @@ button.btn.btn-primary.btn-blue {
     .main-menu ul li a,
     .main-menu ul li a:hover,
     .main-menu ul li.active > a {
-        color: #ffffff;
+        /*color: #ffffff;*/
+    }
+    ul.submenu-course{
+        left: 0 !important;
+        display: none;
+        top: 100% !important;
     }
     #header.sticky .logo {
         /*padding: 15px 0 15px;*/
@@ -1317,6 +1326,12 @@ button.btn.btn-primary.btn-blue {
     .go-content-area{
         padding-bottom: 30px;
     }
+    ul.submenu-course{
+        left: 5% !important;
+        display: none;
+        width: 90% !important;
+        top: 70% !important;
+    }
     .slider_area img{
         height: unset !important;
     }
@@ -1370,7 +1385,8 @@ button.btn.btn-primary.btn-blue {
 
     .main-menu ul li.manutoggle a{
         font-size: 18px;
-        line-height: 12px;
+        /*padding-top: 7px;*/
+        line-height: 6px;
     }
 
     
@@ -1427,7 +1443,12 @@ button.btn.btn-primary.btn-blue {
 
 @media only screen and (max-width: 576px){
     .logo img {
-        max-width: 60px;
+        /* height: 50px; */
+        max-width: 56px;
+        padding: 4px 0 3px;
+    }
+    .main-menu ul li a{
+        padding: 7px 8px;
     }
     .gallerydiv .gallery-item, .gallerydiv .gallery-item.gi-big, .gallerydiv .gallery-item.gi-long {
         width: 100%;
