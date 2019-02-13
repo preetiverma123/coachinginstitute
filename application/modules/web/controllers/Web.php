@@ -32,7 +32,12 @@ class Web extends CI_Controller {
         $this->data['events'] = $this->web->get_event_list(3);
         $this->data['teachers'] = $this->web->get_teacher_list();
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
+        $query = $this->db->query("SELECT * from competition_results");
+        $results= $query->result();
+            
 
+    
+        $this->data['results'] = $results;
         ///StudentsCount
         $this->db->select('*');
         $this->db->from('students');
@@ -162,7 +167,12 @@ class Web extends CI_Controller {
 
     public function competition_results() {
 
-        $this->data['competition_results'] = $this->web->get_list('competition_results', array('status'=>1), '', '', '', 'id', 'DESC'); 
+         $query = $this->db->query("SELECT * from competition_results");
+        $results= $query->result();
+            
+
+    
+        $this->data['results'] = $results;
         $this->data['list'] = TRUE;
         $this->layout->title($this->lang->line('results') . ' | ' . SMS);
         $this->layout->view('competition_results', $this->data);
