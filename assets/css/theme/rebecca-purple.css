@@ -130,7 +130,7 @@ ul.style-course li {
     text-align: center;
 }
 .result-img {
-    height: 220px;
+    height: 140px;
 }
 .result-info>div {
     padding-bottom: 5px;
@@ -144,7 +144,7 @@ ul.style-course li {
     padding-right: 10px;
 }
 .result-img img{
-    height: 220px;
+    height: 140px;
     border: 2px solid #f3861f;
     width: 100%;
 }
