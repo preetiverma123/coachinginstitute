@@ -32,6 +32,7 @@ class Web extends CI_Controller {
         $this->data['events'] = $this->web->get_event_list(3);
         $this->data['teachers'] = $this->web->get_teacher_list();
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
+        $this->data['courses'] = $this->web->get_list('courses', array('status' => 1), '', '', '', 'id', 'ASC');
         $query = $this->db->query("SELECT * from competition_results");
         $results= $query->result();
             
@@ -91,6 +92,7 @@ class Web extends CI_Controller {
     public function index() {
 
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
+
         $this->data['director_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'director-message'), '', '', '', 'id', 'ASC');
 
         $this->data['executive_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'executive-message'), '', '', '', 'id', 'ASC');

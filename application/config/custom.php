@@ -594,7 +594,7 @@ $config['my_hostel']['room']['9'] = '0|0|1|0';
 $config['my_hostel']['member']['9'] = '0|0|0|0';
 $config['my_message']['mail']['9'] = '0|0|0|0';
 $config['my_message']['text']['9'] = '0|0|0|0';
-$config['my_message']['message']['9'] = '0|0|1|0';
+$config['my_message']['message']['9'] = '1|1|1|1';
 $config['my_announcement']['notice']['9'] = '0|0|0|0';
 $config['my_announcement']['news']['9'] = '0|0|0|0';
 $config['my_announcement']['holiday']['9'] = '0|0|0|0';
@@ -766,4 +766,7 @@ $config['my_frontend']['slider']['5'] = '0|0|0|0';
 $config['my_payroll']['grade']['5'] = '0|0|0|0';
 $config['my_payroll']['payment']['5'] = '0|0|0|0';
 $config['my_payroll']['history']['5'] = '0|0|0|0';
-
+$config['my_course']['course']['1'] = '1|1|1|1';
+$config['my_competition']['competition']['1'] = '1|1|1|1';
+$config['my_course']['course']['5'] = '0|0|0|0';
+$config['my_competition']['competition']['5'] = '0|0|0|0';
