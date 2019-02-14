@@ -910,7 +910,12 @@
                   items: 1
               },
               576: {
-                  items: 1
+                  items: 1,
+                  dots :false
+              },
+              320: {
+                  items: 1,
+                  dots :false
               },
               991: {
                   items: 3

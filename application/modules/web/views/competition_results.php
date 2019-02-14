@@ -7,7 +7,7 @@
 
 		     <?php foreach($results as $result){?>
 					     
-				<div class="col-md-4">
+				<div class="col-md-2 col-sm-3">
 					<div class="resultWrap">
 						<div class="result-img">
 							<?php if(!empty($result->photo)){?>

@@ -156,7 +156,7 @@
                                     </ul>
                                 </li>
                                 <!-- end about -->
-                                 <li class="courseMenu"><a href="<?php echo site_url('courses'); ?>" class="hidemenu">Course <i class="fa fa-caret-down"></i></a>                                       
+                                 <li class="courseMenu"><a href="<?php echo site_url('courses'); ?>" class="hidemenu1">Course <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu submenu-course clearfix">
                                         <li class="inline-items-menu"><a href="javascript:void(0);" class="course-dropdown">Target Course</a>
 
@@ -223,6 +223,12 @@
                         $(document).ready(function(){
                             $(".hidemenu").click(function(){
                                 $(".submenu").toggle();
+                            });
+                            
+                        });
+                        $(document).ready(function(){
+                            $(".hidemenu1").click(function(){
+                                $(".submenu-course").toggle();
                             });
                             
                         });
