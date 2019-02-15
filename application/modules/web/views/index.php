@@ -5,9 +5,6 @@
     <div class="col-md-8">
       <div class="slider-left">
         <div class="owl-carousel" id="slider_area">
-         <!--  <div class="item">
-            <img src="assets/uploads/slider/banner2.jpg" class="img-responsive" alt="slider">
-            <div class="overlay"></div> -->
             <?php $slider_str = ''; 
             foreach($sliders as $obj){ ?>
               <?php $slider_str = "assets/uploads/slider/".$obj->image; 
@@ -36,7 +33,7 @@
         </div>
       <div class="col-md-4">
         <div class="panel panel-head">
-          <div class="panel-heading"><h3 class="panel-title">Admission Origin Career Institute</h3></div>
+          <div class="panel-heading"><h3 class="panel-title">Admission @ Origin Career Institute</h3></div>
         </div>
         <div class="scrollDiv scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
           <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 340px;">
@@ -221,52 +218,23 @@
       </div>
 
     </div>
-
-  
 </section>
 <!-- Gallery section -->
   <div class="gallery-section">
-    <div class="site-title">
-      <h3 class="title-section1">Gallery</h3>
-    </div>
-    <div class="gallerydiv">
-      <div class="grid-sizer"></div>
-      <?php if (isset($galleries) && !empty($galleries)) { ?>
-        <?php foreach($galleries as $obj){?>
-          <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
-            <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
-          </div>
+    <div class="container">
+      <div class="site-title">
+        <h3 class="title-section1">Gallery</h3>
+      </div>
+      <div class="gallerydiv">
+        <div class="grid-sizer"></div>
+        <?php if (isset($galleries) && !empty($galleries)) { ?>
+          <?php foreach($galleries as $obj){?>
+            <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
+              <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
+            </div>
+          <?php }?>
         <?php }?>
-      <?php }?>
-  <!--     <div class="gallery-item set-bg" data-setbg="assets/images/gallery1.jpg">
-        <a class="img-popup" href="assets/images/gallery1.jpg"><i class="ti-plus"></i></a>
       </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery2.jpg">
-        <a class="img-popup" href="assets/images/gallery2.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery3.jpg">
-        <a class="img-popup" href="assets/images/gallery3.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-big set-bg" data-setbg="assets/images/gallery4.jpg">
-        <a class="img-popup" href="assets/images/gallery4.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery5.jpg">
-        <a class="img-popup" href="assets/images/gallery5.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery8.jpg">
-        <a class="img-popup" href="assets/images/gallery8.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item gi-long set-bg" data-setbg="assets/images/gallery10.jpg">
-        <a class="img-popup" href="assets/images/gallery8.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery6.jpg">
-        <a class="img-popup" href="assets/images/gallery6.jpg"><i class="ti-plus"></i></a>
-      </div>
-      <div class="gallery-item set-bg" data-setbg="assets/images/gallery7.jpg">
-        <a class="img-popup" href="assets/images/gallery7.jpg"><i class="ti-plus"></i></a>
-      </div> -->
-     
-     
     </div>
   </div>
   <!-- Gallery section -->

@@ -213,7 +213,7 @@ label {
 /* Menu Area start  */
 .main-menu {
     text-align: right;
-    margin-top: 6px;
+    /*margin-top: 6px;*/
 }
 .main-menu ul li ul.submenu li a:hover{
     color: #000 !important;
