@@ -3,17 +3,23 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="course-head">
-					<h3><i class="fa fa-graduation-cap rs-animation-scale-up"></i>JEE(main + Advance)</h3>
+					<h3><i class="fa fa-graduation-cap rs-animation-scale-up"></i><?php echo(!empty($courseDetails->name)?$courseDetails->name:'');?></h3>
 				</div>
 				<div class="course-content">
+                    <p>
+                        (<?php echo(!empty($courseDetails->class_description)?$courseDetails->class_description:'');?>)
+                    </p>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut faucibus massa. Integer a ante eu quam lobortis egestas. Suspendisse id magna nibh. Sed varius condimentum sem nec lobortis. Suspendisse molestie ligula ac ligula laoreet interdum. Duis mollis mi fermentum, blandit sem id, ultricies magna. Suspendisse rhoncus nisi id bibendum feugiat. Nunc volutpat mi nibh, ac viverra ipsum dignissim quis. Aliquam condimentum dapibus rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+						<?php echo(!empty($courseDetails->description)?$courseDetails->description:'');?>
 					</p>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="course-image">
-					<img src="assets/images/course-image.jpg" alt="course">
+                    <?php if(!empty($courseDetails->photo)){?>
+					<img src="<?php echo UPLOAD_PATH;?>/course-photo/<?php echo $courseDetails->photo;?>" alt="course">
+                    <?php }?>
 				</div>
 			</div>
 		</div>

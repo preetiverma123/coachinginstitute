@@ -77,7 +77,7 @@ $route['addApplication'] = 'web/addApplication';
 $route['competition-results'] = 'web/competition_results';
 
 
-$route['courses'] = 'web/courses';
+$route['courses/(:any)'] = 'web/courses/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

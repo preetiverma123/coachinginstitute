@@ -402,9 +402,9 @@ class Web extends CI_Controller {
         $this->layout->view('terms', $this->data);
     }
 
-    public function courses() {
+    public function courses($id) {
 
-       
+       $this->data['courseDetails'] = $this->web->get_single('courses', array('status' => 1, 'id'=>$id), '', '', '', 'id', 'ASC');
         $this->data['list'] = TRUE;
         $this->layout->title('course' . ' | ' . SMS);
         $this->layout->view('course', $this->data);
