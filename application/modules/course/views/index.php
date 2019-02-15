@@ -98,6 +98,20 @@
                                         <div class="help-block"><?php echo form_error('name'); ?></div>
                                     </div>
                                 </div>
+                                
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="type"><?php echo $this->lang->line('type'); ?> <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control col-md-7 col-xs-12"  name="type"  id="type" placeholder="<?php echo $this->lang->line('type'); ?>" required="required">
+                                            <option value="" >Select Course Type</option>
+                                            <option value="target" <?php if(isset($post['type']) && $post['type']=="target"){ echo 'selected';}?> >Target </option>
+                                            <option value="academic" <?php if(isset($post['type']) && $post['type']=="academic"){ echo 'selected';}?> > Academic </option>
+                                            <option value="special" <?php if(isset($post['type']) && $post['type']=="special"){ echo 'selected';}?> > Special</option>
+                                        </select>
+                                        <div class="help-block"><?php echo form_error('type'); ?></div>
+                                    </div>
+                                </div>
                             
                                 
                                                                 
@@ -115,7 +129,7 @@
                                 </div>
                                                                 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?></label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?><span class="required">*</span></label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($post['description']) ?  $post['description'] : ''; ?></textarea>
                                         <div class="help-block"><?php echo form_error('description'); ?></div>
@@ -151,7 +165,19 @@
                                         <div class="help-block"><?php echo form_error('name'); ?></div>
                                     </div>
                                 </div>
-                               
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="type"><?php echo $this->lang->line('type'); ?> <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control col-md-7 col-xs-12"  name="type"  id="type" placeholder="<?php echo $this->lang->line('type'); ?>" required="required">
+                                            <option value="" >Select Course Type</option>
+                                            <option value="target" <?php if(isset($course->type) && $course->type=="target"){ echo 'selected';}?> >Target </option>
+                                            <option value="academic" <?php if(isset($course->type) && $course->type=="academic"){ echo 'selected';}?> > Academic </option>
+                                            <option value="special" <?php if(isset($course->type) && $course->type=="special"){ echo 'selected';}?> > Special</option>
+                                        </select>
+                                        <div class="help-block"><?php echo form_error('type'); ?></div>
+                                    </div>
+                                </div>
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo $this->lang->line('photo'); ?>
                                     </label>
@@ -171,7 +197,7 @@
                                 
                                 
                                 <div class="item form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?></label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?><span class="required">*</span></label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($course->description) ?  $course->description : $post['description']; ?></textarea>
                                         <div class="help-block"><?php echo form_error('description'); ?></div>
@@ -203,7 +229,12 @@
                                     : <?php echo $course->name; ?>
                                     </div>
                                 </div>
-                                
+                                <div class="item form-group">
+                                    <label class="col-md-3 col-sm-3 col-xs-4"><?php echo $this->lang->line('type'); ?></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-8">
+                                    : <?php echo ucfirst($course->type); ?>
+                                    </div>
+                                </div>
                                                               
                                 <div class="item form-group">
                                     <label class="col-md-3 col-sm-3 col-xs-4"><?php echo $this->lang->line('photo'); ?></label>

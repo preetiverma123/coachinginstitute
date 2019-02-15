@@ -30,7 +30,9 @@
                 <!-- <h3>Our History</h3> -->
               </div>
                 <p>
-                <?php echo htmlspecialchars_decode(stripslashes($about->page_description)); ?>
+                <?php
+               
+                 $var = htmlspecialchars_decode($about->page_description); echo $var; ?>
                 </p>
             </div>
           </div>
@@ -41,6 +43,7 @@
     </div>
   </div>
 </section>
+
 <!-- <section class="go-content-area pd-all about-content aboutus-wrap">
     <div class="container">
          <div class="row">

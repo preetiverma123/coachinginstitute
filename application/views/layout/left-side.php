@@ -55,7 +55,7 @@
                         <li><a  href="<?php echo site_url('language'); ?>"><i class="fa fa-language"></i> <?php echo $this->lang->line('language'); ?></a></li>
                     <?php } ?> -->
                     
-                 <!--    <?php if(has_permission(VIEW, 'administrator', 'year') || has_permission(VIEW, 'administrator', 'role') || has_permission(VIEW, 'administrator', 'permission') || has_permission(VIEW, 'administrator', 'user') || has_permission(EDIT, 'administrator', 'password') || has_permission(VIEW, 'administrator', 'backup')){ ?>    
+                    <?php if(has_permission(VIEW, 'administrator', 'year') || has_permission(VIEW, 'administrator', 'role') || has_permission(VIEW, 'administrator', 'permission') || has_permission(VIEW, 'administrator', 'user') || has_permission(EDIT, 'administrator', 'password') || has_permission(VIEW, 'administrator', 'backup')){ ?>    
                         <li><a><i class="fa fa-user"></i> <?php echo $this->lang->line('administrator'); ?> <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                                 <?php if(has_permission(VIEW, 'administrator', 'year')){ ?>   
@@ -78,7 +78,7 @@
                                 <?php } ?>
                             </ul>
                         </li>
-                    <?php } ?>  -->
+                    <?php } ?> 
                     
               <!--       <?php if(has_permission(VIEW, 'hrm', 'designation') || has_permission(VIEW, 'hrm', 'employee')){ ?>    
                     <li><a><i class="fa fa-user-md"></i> <?php echo $this->lang->line('human_resource'); ?> <span class="fa fa-chevron-down"></span></a>
@@ -480,14 +480,16 @@
                     </li>  
                     <?php } ?>
 
-                   
-                    <li><a href="<?php echo site_url('course'); ?>"><i class="fa fa-desktop"></i><?php echo 'Courses' ?></a>
-                   
-                    </li>  
+                    <?php if(has_permission(VIEW, 'course', 'course') || has_permission(VIEW, 'course', 'course')){ ?>
+                        <li><a href="<?php echo site_url('course'); ?>"><i class="fa fa-desktop"></i><?php echo 'Courses' ?></a>
+                       
+                        </li>  
+                    <?php } ?>
+                     <?php if(has_permission(VIEW, 'competition', 'competition') || has_permission(VIEW, 'competition', 'competition')){ ?>
                      <li><a href="<?php echo site_url('competition'); ?>"><i class="fa fa-desktop"></i><?php echo 'Competition Results' ?></a>
                    
                     </li>  
-                  
+                    <?php } ?>
                     
                     <li><a><i class="fa fa-lock"></i><?php echo $this->lang->line('profile'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
