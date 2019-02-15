@@ -125,7 +125,8 @@ ul.style-course li {
     box-shadow:-14.142px 14.142px 20px 0px rgba(157, 157, 157, 0.5);
 }
 .student_name {
-    font-size: 22px;
+    font-size: 15px;
+    font-weight: 600;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -137,6 +138,8 @@ ul.style-course li {
 }
 .result-info{
     padding: 10px;
+    font-size: 13px;
+    min-height: 170px;
     text-align: center;
 }
 .spanresult{
