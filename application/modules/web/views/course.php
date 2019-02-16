@@ -40,7 +40,7 @@
                     	    </div>
                     	    <div class="services-desc">
                     	        <h4 class="services-title">Trending Courses</h4>
-                    	        <p>Lorem ipsum dolor sit amet Sed nec molestie justo</p>
+                    	        <p>Explore the best</p>
                     	    </div>
                     	</div>
                     </div>
@@ -50,7 +50,7 @@
                     	        <i class="fa fa-book rs-animation-scale-up"></i>
                     	    </div>
                     	    <div class="services-desc">
-                    	        <h4 class="services-title">Books &amp; Liberary</h4>
+                    	        <h4 class="services-title">Books &amp; Library</h4>
                     	        <p>Lorem ipsum dolor sit amet Sed nec molestie justo</p>
                     	    </div>
                     	</div>
