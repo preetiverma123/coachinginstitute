@@ -541,6 +541,40 @@
         </div>
 </section>
 <?php } ?>
+<!-- our testimonials -->
+<section class="section-testimonial">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+        <div class="site-title">
+            <h3 class="title-section1">Our Testimonials</h3>
+        </div>
+        <div id="owl-testimonials" class="owl-carousel">
+          <div class="testimonial clearfix">
+            <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
+              <div class="testimonial__info">
+                <span class="testimonial__author">Nicky Papaiya</span>
+                <!-- <span class="testimonial__company">Surat</span> -->
+              </div>
+              <div class="testimonial__body">
+                <p class="testimonial__text">“Got the Saree for my mom on her Birthday &amp; she just loved the Saree. Very nice color combination &amp; easy to wear anytime. Nice collection, will shop again with Vastra.”</p>
+              </div>
+          </div>
+          <div class="testimonial clearfix">
+              <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
+              <div class="testimonial__info">
+                <span class="testimonial__author">Nicky Papaiya</span>
+                <!-- <span class="testimonial__company">Surat</span> -->
+              </div>
+              <div class="testimonial__body">
+                <p class="testimonial__text">“Got the Saree for my mom on her Birthday &amp; she just loved the Saree. Very nice color combination &amp; easy to wear anytime. Nice collection, will shop again with Vastra.”</p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="contact-content-area" id="contact-section">
    <div class="go-heading go-lined site-title">
       <h3 class="title-section1">Contact Us</h3>
@@ -605,7 +639,7 @@
 </section>
 <div class="applyNowWrap">
     <a href="<?php echo site_url('apply-online'); ?>">
-      <img src="assets/images/apply-online.png" alt="apply">
+      <img src="assets/images/apply_online.png" alt="apply">
     </a>
   </div>
 <!-- <section class="content-area">
@@ -854,7 +888,7 @@
                   items: 1
               },
               576: {
-                  items: 1
+                  items: 2
               },
               991: {
                   items: 2
@@ -879,8 +913,31 @@
                   items: 1,
                   dots :false
               },
+              767:{
+                items: 2
+              },
               991: {
                   items: 3
+              }
+            }
+          });
+/*-------------Testimonial------------------*/
+          $('#owl-testimonials').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            responsive: {
+              0: {
+                  items: 1
+              },
+              480: {
+                  items: 1,
+                  dots :false
+              },
+              991: {
+                items: 2,
+                // dots :false,
+                nav:true
               }
             }
           });
@@ -902,8 +959,11 @@
                   items: 1,
                   dots :false
               },
-              991: {
+              576: {
                   items: 2
+              },
+              991: {
+                  items: 3
               },
               1200: {
                   items: 4

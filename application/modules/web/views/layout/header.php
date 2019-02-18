@@ -29,8 +29,8 @@
                         <ul>
                             <li><a href="#careerModal" data-toggle="modal">Career</a></li>
                             <li>|</li>
-                            <li><a href="<?php echo site_url('apply-online'); ?>">Apply Online</a></li>
-                            <li>|</li>
+                            <!-- <li><a href="<?php echo site_url('apply-online'); ?>">Apply Online</a></li> -->
+                            <!-- <li>|</li> -->
                             <?php if (logged_in_user_id()) { ?>       
                             <li><a href="<?php echo site_url('dashboard'); ?>"><?php echo $this->lang->line('dashboard'); ?></a></li>
                             <li>|</li>
@@ -195,7 +195,7 @@
                                         </li>
                                     </ul>
                                 </li>
-
+                                 <li><a href="javascript:void(0);">Our Team</a></li>
                                <!--  <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li> -->
                                 <li><a href="<?php echo 'competition-results'?>">Results<i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
