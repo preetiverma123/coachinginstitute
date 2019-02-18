@@ -542,6 +542,17 @@ ul.style-course li {
     margin-right: 6px;
     border-radius: 50%;
 }
+.moved-text{
+    height: 39px;
+    color: #fff;
+}
+.moved-text a{
+  color: #fff;  
+}
+.moved-text marquee {
+    padding: 10px;
+    /* vertical-align: middle; */
+}
 .team-item .team-content {
     position: absolute;
     width: 100%;
