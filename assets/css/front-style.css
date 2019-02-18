@@ -514,6 +514,9 @@ label {
     margin: 0px auto;
     /*margin-top: 40px;*/
 }
+ul.static-links li {
+    list-style: none;
+}
 .addmissionImage {
     /* padding: 10px; */
 }
@@ -1342,6 +1345,12 @@ button.btn.btn-primary.btn-blue {
 @media only screen and (max-width: 767px) {
     .logo a {
         font-size: 20px !important;
+    }
+    .moved-text marquee{
+        padding: 5px;
+    }
+    .moved-text {
+        height: 19px;
     }
     ul.submenu{
         display: none;
