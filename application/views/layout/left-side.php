@@ -490,6 +490,12 @@
                    
                     </li>  
                     <?php } ?>
+
+                     <?php if(has_permission(VIEW, 'review', 'review')){ ?>
+                     <li><a href="<?php echo site_url('review'); ?>"><i class="fa fa-desktop"></i><?php echo 'Reviews' ?></a>
+                   
+                    </li>  
+                    <?php } ?>
                     
                     <li><a><i class="fa fa-lock"></i><?php echo $this->lang->line('profile'); ?> <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">

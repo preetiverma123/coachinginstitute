@@ -113,6 +113,20 @@
                                         <div class="help-block"><?php echo form_error('type'); ?></div>
                                     </div>
                                 </div>
+
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="type"><?php echo 'Stream'; ?> 
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control col-md-7 col-xs-12"  name="stream"  id="stream" placeholder="<?php echo 'Stream'; ?>">
+                                            <option value="" >Select Stream </option>
+                                            <option value="medicals" <?php if(isset($post['stream']) && $post['stream']=="medicals"){ echo 'selected';}?> >Medicals </option>
+                                            <option value="engineering" <?php if(isset($post['stream']) && $post['stream']=="engineering"){ echo 'selected';}?> > Engineering </option>
+                                           
+                                        </select>
+                                        <div class="help-block"><?php echo form_error('stream'); ?></div>
+                                    </div>
+                                </div>
                             
                                 
                                                                 
@@ -186,6 +200,21 @@
                                         <div class="help-block"><?php echo form_error('type'); ?></div>
                                     </div>
                                 </div>
+
+                               <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="stream"><?php echo 'Stream'; ?> <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <select class="form-control col-md-7 col-xs-12"  name="stream"  id="stream" placeholder="Stream" required="required">
+                                            <option value="" >Select Stream</option>
+                                            <option value="engineering" <?php if(isset($course->stream) && $course->stream=="engineering"){ echo 'selected';}?> >Engineering </option>
+                                            <option value="medicals" <?php if(isset($course->stream) && $course->stream=="medicals"){ echo 'selected';}?> > Medicals </option>
+                                            
+                                        </select>
+                                        <div class="help-block"><?php echo form_error('type'); ?></div>
+                                    </div>
+                                </div>
+
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo $this->lang->line('photo'); ?>
                                     </label>
@@ -251,7 +280,14 @@
                                     : <?php echo ucfirst($course->type); ?>
                                     </div>
                                 </div>
-                                                              
+                                <?php if($course->stream!=NULL){?>
+                                    <div class="item form-group">
+                                        <label class="col-md-3 col-sm-3 col-xs-4"><?php echo 'Stream'; ?></label>
+                                        <div class="col-md-9 col-sm-9 col-xs-8">
+                                        : <?php echo ucfirst($course->stream); ?>
+                                        </div>
+                                    </div>
+                                <?php }?>                       
                                 <div class="item form-group">
                                     <label class="col-md-3 col-sm-3 col-xs-4"><?php echo $this->lang->line('photo'); ?></label>
                                     <div class="col-md-9 col-sm-9 col-xs-8">

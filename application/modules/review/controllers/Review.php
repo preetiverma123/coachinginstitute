@@ -13,14 +13,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @copyright       : Codetroopers Team     
  * ********************************************************** */
 
-class Course extends MY_Controller {
+class Review extends MY_Controller {
 
     public $data = array();
 
     function __construct() {
         parent::__construct();      
         
-        $this->load->model('Course_Model', 'courses', true);
+        $this->load->model('Review_Model', 'reviews', true);
         // check running session
         if(!$this->academic_year_id){
             error($this->lang->line('academic_year_setting'));
@@ -41,11 +41,11 @@ class Course extends MY_Controller {
     public function index() {
 
         check_permission(VIEW);
-        $this->data['courses'] = $this->courses->get_course_list();
+        $this->data['reviews'] = $this->reviews->get_review_list();
       
         $this->data['list'] = TRUE;
-        $this->layout->title($this->lang->line('manage_course') . ' | ' . SMS);
-        $this->layout->view('course/index', $this->data);
+        $this->layout->title($this->lang->line('manage_review') . ' | ' . SMS);
+        $this->layout->view('review/index', $this->data);
     }
 
     
@@ -62,19 +62,19 @@ class Course extends MY_Controller {
      
         check_permission(ADD);
         if ($_POST) {
-            $this->_prepare_course_validation();
+            $this->_prepare_review_validation();
             if ($this->form_validation->run() === TRUE) {
-                $data = $this->_get_posted_course_data();
+                $data = $this->_get_posted_review_data();
                 $data['status'] =1;
-                $insert_id = $this->courses->insert('courses', $data);
+                $insert_id = $this->reviews->insert('reviews', $data);
 
                 if ($insert_id) {
                     /*$this->__insert_enrollment($insert_id);*/
                     success($this->lang->line('insert_success'));
-                    redirect('course/index/');
+                    redirect('review/index/');
                 } else {
                     error($this->lang->line('insert_failed'));
-                    redirect('course/add/');
+                    redirect('review/add/');
                 }
             } else {
 
@@ -84,11 +84,11 @@ class Course extends MY_Controller {
         
         
         
-        $this->data['courses'] = $this->courses->get_course_list();
+        $this->data['reviews'] = $this->reviews->get_review_list();
         
         $this->data['add'] = TRUE;
-        $this->layout->title($this->lang->line('add') . ' ' . $this->lang->line('course') . ' | ' . SMS);
-        $this->layout->view('course/index', $this->data);
+        $this->layout->title($this->lang->line('add') . ' ' . $this->lang->line('review') . ' | ' . SMS);
+        $this->layout->view('review/index', $this->data);
     }
 
         
@@ -107,46 +107,46 @@ class Course extends MY_Controller {
 
         if(!is_numeric($id)){
             error($this->lang->line('unexpected_error'));
-            redirect('course/index');     
+            redirect('review/index');     
         }
         
         if ($_POST) {
-            $this->_prepare_course_validation();
+            $this->_prepare_review_validation();
             if ($this->form_validation->run() === TRUE) {
-                $data = $this->_get_posted_course_data();
+                $data = $this->_get_posted_review_data();
               
-                $updated = $this->courses->update('courses', $data, array('id' => $this->input->post('id')));
+                $updated = $this->reviews->update('reviews', $data, array('id' => $this->input->post('id')));
 
                 if ($updated) {
                    
                     success($this->lang->line('update_success'));
-                    redirect('course/index/'.$this->input->post('class_id'));
+                    redirect('review/index/'.$this->input->post('class_id'));
                 } else {
                     error($this->lang->line('update_failed'));
-                    redirect('course/edit/' . $this->input->post('id'));
+                    redirect('review/edit/' . $this->input->post('id'));
                 }
             } else {
-                $this->data['course'] = $this->courses->get_single_course($this->input->post('id'));
+                $this->data['review'] = $this->reviews->get_single_review($this->input->post('id'));
             }
         }
 
         if ($id) {
-            $this->data['course'] = $this->courses->get_single_course($id);
+            $this->data['review'] = $this->reviews->get_single_review($id);
            
-            if (!$this->data['course']) {
-                redirect('course/index');
+            if (!$this->data['review']) {
+                redirect('review/index');
             }
         }
         
         
 
         
-        $this->data['courses'] = $this->courses->get_course_list();
+        $this->data['reviews'] = $this->reviews->get_review_list();
         
             
         $this->data['edit'] = TRUE;
-        $this->layout->title($this->lang->line('edit') . ' ' . $this->lang->line('course') . ' | ' . SMS);
-        $this->layout->view('course/index', $this->data);
+        $this->layout->title($this->lang->line('edit') . ' ' . $this->lang->line('review') . ' | ' . SMS);
+        $this->layout->view('review/index', $this->data);
     }
 
         
@@ -159,24 +159,24 @@ class Course extends MY_Controller {
     * @param           : $student_id integer value
     * @return          : null 
     * ********************************************************** */
-    public function view($course_id = null) {
+    public function view($review_id = null) {
 
        
         check_permission(VIEW);
         
-        if(!is_numeric($course_id)){
+        if(!is_numeric($review_id)){
              error($this->lang->line('unexpected_error'));
-              redirect('course/index');
+              redirect('review/index');
         }
         
-        $this->data['course'] = $this->courses->get_single_course($course_id);        
+        $this->data['review'] = $this->reviews->get_single_review($review_id);        
      
         
         
-        $this->data['courses'] = $this->courses->get_course_list();
+        $this->data['reviews'] = $this->reviews->get_review_list();
         $this->data['detail'] = TRUE;
-        $this->layout->title($this->lang->line('view') . ' ' . $this->lang->line('course') . ' | ' . SMS);
-        $this->layout->view('course/index', $this->data);
+        $this->layout->title($this->lang->line('view') . ' ' . $this->lang->line('review') . ' | ' . SMS);
+        $this->layout->view('review/index', $this->data);
     }
     
         
@@ -188,16 +188,16 @@ class Course extends MY_Controller {
     * @param           : null
     * @return          : null 
     * ********************************************************** */
-    private function _prepare_course_validation() {
+    private function _prepare_review_validation() {
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="error-message" style="color: red;">', '</div>');
 
       
 
         $this->form_validation->set_rules('name', $this->lang->line('name'), 'trim|required');
-        $this->form_validation->set_rules('type', $this->lang->line('type'), 'trim|required');
-        $this->form_validation->set_rules('class_description', $this->lang->line('class_description'), 'trim|required');
-        $this->form_validation->set_rules('description', $this->lang->line('description'), 'trim|required');
+        
+        $this->form_validation->set_rules('review', 'Review', 'trim|required');
+        
         $this->form_validation->set_rules('photo', $this->lang->line('photo'), 'trim|callback_photo');
     }
                         
@@ -262,16 +262,13 @@ class Course extends MY_Controller {
     * @param           : null
     * @return          : $data array(); value 
     * ********************************************************** */
-    private function _get_posted_course_data() {
+    private function _get_posted_review_data() {
 
         $items = array();
 
         $items[] = 'name';
-        $items[] = 'type';
-        $items[] = 'description';
-        $items[] = 'stream';
-        $items[] = 'class_description';
-
+        $items[] = 'review';
+       
         $data = elements($items, $_POST);
 
         $data['created_at'] = date('Y-m-d H:i:s', strtotime($this->input->post('created_at')));
@@ -315,7 +312,7 @@ class Course extends MY_Controller {
                     $photo_type == 'image/jpg' || $photo_type == 'image/png' ||
                     $photo_type == 'image/x-png' || $photo_type == 'image/gif') {
 
-                $destination = 'assets/uploads/course-photo/';
+                $destination = 'assets/uploads/review-photo/';
 
                 $file_type = explode(".", $photo);
                 $extension = strtolower($file_type[count($file_type) - 1]);
@@ -356,19 +353,19 @@ class Course extends MY_Controller {
         
         if(!is_numeric($id)){
              error($this->lang->line('unexpected_error'));
-              redirect('course/index');
+              redirect('review/index');
         }
         
-        $course = $this->courses->get_single('courses', array('id' => $id));
-        if (!empty($course)) {
+        $review = $this->reviews->get_single('reviews', array('id' => $id));
+        if (!empty($review)) {
 
             // delete student data
-            $this->courses->delete('courses', array('id' => $id));
+            $this->reviews->delete('reviews', array('id' => $id));
 
          
             $destination = 'assets/uploads/';
-            if (file_exists($destination . '/course-photo/' . $course->photo)) {
-                @unlink($destination . '/course-photo/' . $course->photo);
+            if (file_exists($destination . '/review-photo/' . $review->photo)) {
+                @unlink($destination . '/review-photo/' . $review->photo);
             }
 
             success($this->lang->line('delete_success'));
@@ -376,7 +373,7 @@ class Course extends MY_Controller {
             error($this->lang->line('delete_failed'));
         }
         
-        redirect('course/index/');
+        redirect('review/index/');
     }
 
         

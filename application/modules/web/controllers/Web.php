@@ -101,7 +101,8 @@ class Web extends CI_Controller {
         $this->data['events'] = $this->web->get_event_list(3);
         $this->data['teachers'] = $this->web->get_teacher_list();
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
-
+        $this->data['reviews'] = $this->web->get_list('reviews', array('status' => 1), '', '', '', 'id', 'ASC');
+        
         ///StudentsCount
         $this->db->select('*');
         $this->db->from('students');
@@ -167,9 +168,9 @@ class Web extends CI_Controller {
         $this->layout->view('news', $this->data);
     }
 
-    public function competition_results() {
+    public function competition_results($type) {
 
-         $query = $this->db->query("SELECT * from competition_results");
+        $query = $this->db->query("SELECT * from competition_results where achiever_type = '".$type."'");
         $results= $query->result();
             
 

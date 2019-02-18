@@ -768,5 +768,6 @@ $config['my_payroll']['payment']['5'] = '0|0|0|0';
 $config['my_payroll']['history']['5'] = '0|0|0|0';
 $config['my_course']['course']['1'] = '1|1|1|1';
 $config['my_competition']['competition']['1'] = '1|1|1|1';
+$config['my_review']['review']['1'] = '1|1|1|1';
 $config['my_course']['course']['5'] = '0|0|0|0';
 $config['my_competition']['competition']['5'] = '0|0|0|0';

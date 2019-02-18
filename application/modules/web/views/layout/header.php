@@ -157,10 +157,16 @@
                                 <!-- about -->
                                 <li><a href="javascript:void(0);" class="hidemenu">About Us <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
-                                        <li><a href="<?php echo site_url('about/origin'); ?>">Origin</a></li>
-                                        <li><a href="<?php echo site_url('about/director-message'); ?>">Director's Message</a></li>
-                                        <li><a href="<?php echo site_url('about/success-story'); ?>">Success Story</a></li>
                                         <li><a href="<?php echo site_url('about/why-origin'); ?>">Why Origin</a></li>
+                                        <li><a href="<?php echo site_url('about/success-story'); ?>">Success Story</a></li>
+                                        <li><a href="<?php echo site_url('about/mission'); ?>">Our Mission</a></li>
+                                        <li><a href="<?php echo site_url('about/vision'); ?>">Our Vision</a></li>
+                                        <li><a href="<?php echo site_url('about/faculty'); ?>">Our Faculty</a></li>
+                                        <li><a href="<?php echo site_url('about/director-message'); ?>">Director's Message</a></li>
+                                        <li><a href="<?php echo site_url('about/origin'); ?>">Origin</a></li>
+                                       
+                                        
+                                       
                                     </ul>
                                 </li>
                                 <!-- end about -->
@@ -169,13 +175,54 @@
                                         <li class="inline-items-menu"><a href="javascript:void(0);" class="course-dropdown">Target Course</a>
 
                                             <ul class="course-dropdown-sub">
-                                                <?php foreach($courses as $course){?>
-                                                    <?php if($course->type=='target'){ ?>
-                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
-                                                   <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
-                                                    <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
-                                                     <?php }?>
-                                                <?php }?>
+                                            
+                                                    <li><a href="javascript:void(0);">Engineering</a>
+                                                        <ul class="course-dropdown-sub">
+                                                            <?php foreach($courses as $course){?>
+                                                                <?php if($course->type=='target'){ ?>
+                                                                    <?php if($course->stream!=NULL && $course->stream=='engineering'){?>
+                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                               
+                                                                    <?php }?>
+                                                                 <?php }?>
+                                                            <?php }?>
+                                                        </ul>
+
+
+
+
+
+                                                    </li>
+
+                                                      <li><a href="javascript:void(0);">Medicals</a>
+                                                        <ul class="course-dropdown-sub">
+                                                            <?php foreach($courses as $course){?>
+                                                                <?php if($course->type=='target'){ ?>
+                                                                    <?php if($course->stream!=NULL && $course->stream=='medicals'){?>
+                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                              
+                                                                    <?php }?>
+                                                                 <?php }?>
+                                                            <?php }?>
+                                                        </ul>
+
+
+
+
+
+                                                    </li>
+
+                                                     
+                                                    <?php foreach($courses as $course){?>
+                                                        <?php if($course->type=='target' && $course->stream==NULL){ ?>
+                                                  
+                                                            <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                              
+                                                        <?php }?>
+                                                    <?php }?>
+                                                        
+                                                  
+                                                    
                                             </ul>
                                         </li class="inline-items-menu">
                                         <li class="inline-items-menu"><a href="javascript:void(0);" class="course-dropdown">Academic Course</a>
@@ -195,22 +242,21 @@
                                                  <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='special'){ ?>
                                                     <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
-                                                   <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
-                                                    <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
+                                                   
                                                      <?php }?>
                                                 <?php }?>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                 <li><a href="javascript:void(0);">Our Team</a></li>
+                                 <li><a href="<?php echo site_url('teachers'); ?>">Our Team</a></li>
                                <!--  <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li> -->
                                 <li><a href="<?php echo 'competition-results'?>">Results<i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
-                                        <li><a href="<?php echo site_url('about/origin'); ?>">Origin</a></li>
-                                        <li><a href="<?php echo site_url('about/director-message'); ?>">Director's Message</a></li>
-                                        <li><a href="<?php echo site_url('about/success-story'); ?>">Success Story</a></li>
-                                        <li><a href="<?php echo site_url('about/why-origin'); ?>">Why Origin</a></li>
+                                        <li><a href="<?php echo site_url('competition-results/iit'); ?>"> IIT Achiever</a></li>
+                                        <li><a href="<?php echo site_url('competition-results/neet'); ?>"> NEET Achiever</a></li>
+                                        <li><a href="<?php echo site_url('competition-results/tenth_class'); ?>">Class X Achiever </a></li>
+                                        <li><a href="<?php echo site_url('competition-results/twelveth_class'); ?>"> Class XII Achiever </a></li>
                                     </ul>
                                 </li>
                                 <!-- <li><a href="javascript:void(0);"><?php echo $this->lang->line('teacher'); ?></a></li>
