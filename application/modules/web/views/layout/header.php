@@ -197,7 +197,14 @@
                                 </li>
 
                                <!--  <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li> -->
-                                <li><a href="<?php echo 'competition-results'?>">Results</a></li>
+                                <li><a href="<?php echo 'competition-results'?>">Results<i class="fa fa-caret-down"></i></a>                                       
+                                    <ul class="submenu">
+                                        <li><a href="<?php echo site_url('about/origin'); ?>">Origin</a></li>
+                                        <li><a href="<?php echo site_url('about/director-message'); ?>">Director's Message</a></li>
+                                        <li><a href="<?php echo site_url('about/success-story'); ?>">Success Story</a></li>
+                                        <li><a href="<?php echo site_url('about/why-origin'); ?>">Why Origin</a></li>
+                                    </ul>
+                                </li>
                                 <!-- <li><a href="javascript:void(0);"><?php echo $this->lang->line('teacher'); ?></a></li>
                                 <li><a href="javascript:void(0);"><?php echo $this->lang->line('staff'); ?></a></li> -->
                                

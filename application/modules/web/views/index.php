@@ -35,71 +35,77 @@
         <div class="panel panel-head">
           <div class="panel-heading"><h3 class="panel-title">Admission @ Origin Career Institute</h3></div>
         </div>
-        <div class="scrollDiv scroll-wrapper list-group scrollbar-macosx" style="position: relative;">
-          <ul class="list-group  scrollbar-macosx scroll-content scroll-scrolly_visible" style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 340px;">
-            <li class="list-group-item">
-              <i class="fa fa-caret-right"></i>Admission Course
-            
-              <ul class="style-course">
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b>
-                  <br>
-                  (Class XII<sup>th</sup> passout)
-                </a>
+        <div class="scrollDiv scroll-wrapper list-group" style="position: relative;">
+          <div class="scrollbar" id="style-3">
+            <div class="force-overflow">
+              <ul class="list-group force_overflow" style="height: auto; margin-bottom: 0px; margin-right: 0px;">
+                <li class="list-group-item">
+                  <i class="fa fa-caret-right"></i>Admission Course
+                
+                  <ul class="style-course">
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b>
+                      <br>
+                      (Class XII<sup>th</sup> passout)
+                    </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>NEET/AIIMS</b>
+                      <br>
+                      (Class XII<sup>th</sup> passout)
+                    </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>Foundation</b>
+                      <br>
+                      (Class XI<sup>th</sup> & XII<sup>th</sup>)
+                    </a>
+                    </li>
+                     <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>Prefoundation</b>
+                      <br>
+                      (Class VIII<sup>th</sup> & IX<sup>th</sup> & X<sup>th</sup>)
+                    </a>
+                    </li>
+                   
+                  </ul>
                 </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>NEET/AIIMS</b>
-                  <br>
-                  (Class XII<sup>th</sup> passout)
-                </a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>Foundation</b>
-                  <br>
-                  (Class XI<sup>th</sup> & XII<sup>th</sup>)
-                </a>
-                </li>
-                 <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>Prefoundation</b>
-                  <br>
-                  (Class VIII<sup>th</sup> & IX<sup>th</sup> & X<sup>th</sup>)
-                </a>
-                </li>
-               
+
+               <!--  <li class="list-group-item">
+                  <i class="fa fa-caret-right"></i>Admission Announcement
+                
+                  <ul class="style-course">
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
+                    </li>
+                  </ul>
+                </li> -->
+             
               </ul>
-            </li>
-           <!--  <li class="list-group-item">
-              <i class="fa fa-caret-right"></i>Admission Announcement
-            
-              <ul class="style-course">
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-                <li>
-                  <a href="javascript:void(0);">
-                  <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b></a>
-                </li>
-              </ul>
-            </li> -->
-         
-          </ul>
+          </div>
+        </div>
         </div>
       </div>
     </div>
   </div>
+ 
 </section>
 <section class="messageContainer padding-btm" id="message-section">
   <div class="container">
@@ -134,7 +140,7 @@
               </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
               <div class="go-box-wrap our-direct bg-light">
                 <div class="block-title">
                   <h2>
@@ -225,13 +231,16 @@
       <div class="site-title">
         <h3 class="title-section1">Gallery</h3>
       </div>
-      <div class="gallerydiv">
-        <div class="grid-sizer"></div>
+      <div class="owl-carousel" id="galleryId">
+        <!-- <div class="grid-sizer"></div> -->
         <?php if (isset($galleries) && !empty($galleries)) { ?>
           <?php foreach($galleries as $obj){?>
-            <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>">
-              <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"><i class="ti-plus"></i></a>
-            </div>
+            <!-- <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>"> -->
+              <div class="galleryImg">
+                <img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>" alt="person">
+                <!-- <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"></a> -->
+              </div>
+            <!-- </div> -->
           <?php }?>
         <?php }?>
       </div>
@@ -609,6 +618,11 @@
         </div>
     </div>
 </section>
+<div class="applyNowWrap">
+    <a href="<?php echo site_url('apply-online'); ?>">
+      <img src="assets/images/apply-online.png" alt="apply">
+    </a>
+  </div>
 <!-- <section class="content-area">
   <div class="front-contact">
     <div class="container">
@@ -801,13 +815,13 @@
   $("#career").validate();
  $(document).ready(function() {
           $('#founder-msg').owlCarousel({
-            loop: true,
-            margin: 30,
-            nav: true,
-            items: 1,
-            dots: true,
-            autoplay: true
-          });
+              loop: true,
+              margin: 30,
+              nav: true,
+              items: 1,
+              dots: true,
+              autoplay: true
+            });
           $('#notice-board').owlCarousel({
             items: 1,
             loop: true,
@@ -867,7 +881,6 @@
           });
           /*----------------our team------------*/
           $('#our-team').owlCarousel({
-            items: 3,
             loop: true,
             margin: 30,
             nav: true,
@@ -876,10 +889,6 @@
             responsive: {
               0: {
                   items: 1
-              },
-              576: {
-                  items: 1,
-                  dots :false
               },
               320: {
                   items: 1,
@@ -891,7 +900,31 @@
             }
           });
 
-         
-});
+          /*our gallery*/
+
+          $('#galleryId').owlCarousel({
+          
+            loop: true,
+            margin: 30,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            responsive: {
+              0: {
+                  items: 1
+              },
+              320: {
+                  items: 1,
+                  dots :false
+              },
+              991: {
+                  items: 2
+              },
+              1200: {
+                  items: 4
+              }
+            }
+          });
+       }); 
 
  </script>
