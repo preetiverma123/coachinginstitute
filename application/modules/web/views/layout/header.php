@@ -250,6 +250,7 @@
                                     </ul>
                                 </li>
                                  <li><a href="<?php echo site_url('teachers'); ?>">Our Team</a></li>
+                                 <li><a href="<?php echo site_url('galleries'); ?>"><?php echo $this->lang->line('gallery'); ?></a></li>
                               
                                 <li><a href="javascript:void(0)">Results<i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="go-heading go-lined site-title">
-		      <h3 class="title-section1">Results Name</h3>
+		      <h3 class="title-section1">Our Results</h3>
 		    </div>
 
 		     <?php foreach($results as $result){?>
