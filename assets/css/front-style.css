@@ -329,34 +329,35 @@ label {
 }
 .about-school .owl-carousel .owl-nav{
     display: block;
-    top: -30px;
+    top: -31px;
+    /* height: 20px; */
 }
 .about-school .owl-carousel .owl-prev:before {
     content: "\f053";
-    font-size: 15px;
+    font-size: 11px;
     color: #fff;
     right: 35px;
     border:1px solid transparent;
     padding: 5px 5px 2px;
-    background-color: #f3861f;
+    background-color: #f33c1f;
     font-family: fontAwesome;
     position: absolute;
 }
 .about-school .owl-carousel .owl-next:before {
     content: "\f054";
-    font-size: 15px;
+    font-size: 11px;
     color: #fff;
     border:1px solid transparent;
     padding: 5px 5px 2px;
-    background-color: #f3861f;
+    background-color: #f33c1f;
     font-family: fontAwesome;
     position: absolute;
 }
 .about-school .owl-carousel .owl-prev:hover:before {
     content: "\f053";
     font-size: 15px;
-    color: #f3861f;
-    border:1px solid #f3861f;
+    color: #f33c1f;
+    border:1px solid #f33c1f;
     right: 35px;
     padding: 5px 5px 2px;
     background-color: #fff;
@@ -366,8 +367,8 @@ label {
 .about-school .owl-carousel .owl-next:hover:before {
     content: "\f054";
     font-size: 15px;
-    color: #f3861f;
-    border:1px solid #f3861f;
+    color: #f33c1f;
+    border:1px solid #f33c1f;
     padding: 5px 5px 2px;
     background-color: #fff;
     font-family: fontAwesome;
@@ -383,7 +384,7 @@ label {
 .owl-carousel .owl-prev:before{
     content:"\f053";
     font-size: 30px;
-    color: #f3861f;
+    color: #f33c1f;
     font-family: fontAwesome;
     position: absolute;
 }
@@ -391,7 +392,7 @@ label {
 .owl-carousel .owl-next:before{
    content: "\f054";
     font-size: 30px;
-    color: #f3861f;
+    color: #f33c1f;
     right: 8px;
     /* left: auto; */
     font-family: fontAwesome;
@@ -411,7 +412,7 @@ label {
     height: 10px;
     border-radius: 50%;
     width: 10px;
-    background-color: #f3861f;
+    background-color: #f33c1f;
 }
 .owl-carousel .owl-dot span {
     display: block;
@@ -478,20 +479,54 @@ label {
 }
 .notice-single{
     border-right: none;
-    margin: 0 30px;
+    /*margin: 0 30px;*/
     text-align: center;
     box-shadow: 0 2px 5px 0 #00000014;
     background: #fff3f3;
 }
+.d_papers:before, .d_papers:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateZ(2.5deg);
+    -o-transform: rotate(2.5deg);
+    transform: rotateZ(2.5deg);
+    z-index: -1;
+}
+.d_papers:after {
+    -webkit-transform: rotateZ(-2.5deg) !important;
+    -o-transform: rotate(-2.5deg) !important;
+    transform: rotateZ(-2.5deg) !important;
+}
+
+.d_papers, .d_papers:before, .d_papers:after {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.1), 1px 1px 3px rgba(0,0,0,0.2);
+}
+.d_papers {
+    position: relative;
+    width: 90%;
+    padding: 1em 1em 0;
+    margin: 0px auto;
+    /*margin-top: 40px;*/
+}
+.addmissionImage {
+    /* padding: 10px; */
+}
 .notice-single .notice-title h2{
     font-size: 18px;
     line-height: 1.5;
-    color: #f3861f;
+    color: #f33c1f;
     font-weight: 600;
 }
 .notice-single .notice-title h3{
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 700;
+    color: #000000;
     font-style: italic;
 }
 .notice-single .notice-icon {
@@ -672,13 +707,13 @@ nav{
 }
 button.btn.btn-primary.btn-blue {
     padding: 13px 30px;
-    background: #f3861f;
-    border: 1px solid #f3861f;
+    background: #f33c1f;
+    border: 1px solid #f33c1f;
 }
 .contact-form button.btn.btn-primary.btn-blue {
     padding: 13px 30px;
-    background: #f3861f;
-    border: 1px solid #f3861f;
+    background: #f33c1f;
+    border: 1px solid #f33c1f;
 }
 .right-pane{
     padding: 10px;
@@ -804,14 +839,14 @@ button.btn.btn-primary.btn-blue {
 
 .gallery-section {
     padding: 60px 0;
-    border-top:2px solid #f3861f;
-    border-bottom:2px solid #f3861f;
+    border-top:2px solid #f33c1f;
+    border-bottom:2px solid #f33c1f;
 }
 .gallerydiv .gallery-item a {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: #f3861f;
+    background: #f33c1f;
     color: #fff;
     left: 50%;
     top: 60%;
@@ -858,7 +893,7 @@ button.btn.btn-primary.btn-blue {
 
 .event-area{
     padding-top: 40px;
-    /*border-top:1px solid #f3861f; */
+    /*border-top:1px solid #f33c1f; */
     /*background: #ebf0f4;*/
     padding-bottom: 70px;
 }
@@ -1015,7 +1050,7 @@ button.btn.btn-primary.btn-blue {
 }
 
 .profile-details h4{
-    background: #f3861f;
+    background: #f33c1f;
     padding: 5px;
     font-size: 20px;
     margin: 0 20px;
@@ -1091,10 +1126,10 @@ button.btn.btn-primary.btn-blue {
     font-size: 18px;
 }
 #careerModal button {
-    background: #f3861f;
+    background: #f33c1f;
     /* padding-left: 10px; */
     margin-left: 15px;
-    border: 1px solid #f3861f;
+    border: 1px solid #f33c1f;
 }
 .career-modal .btn-default:hover{
     background-color: transparent;
@@ -1318,7 +1353,7 @@ button.btn.btn-primary.btn-blue {
         padding: 0 15px;
     }
     .mainmenu.responsive{
-        border-top: 1px solid #f3861f;
+        border-top: 1px solid #f33c1f;
     }
     .main-menu ul li ul.submenu li a{
         padding: 10px 15px;
