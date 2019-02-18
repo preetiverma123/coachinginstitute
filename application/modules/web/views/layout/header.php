@@ -12,7 +12,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="moved-text">
                         <a href="">
-                            <marquee onmouseover="this.stop();" onmouseout="this.start();">We are launching an app for students</marquee>
+                            <marquee onmouseover="this.stop();">We are launching an app for students</marquee>
                         </a>
                     </div>
                 </div>

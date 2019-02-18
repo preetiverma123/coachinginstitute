@@ -1346,6 +1346,12 @@ button.btn.btn-primary.btn-blue {
     .logo a {
         font-size: 20px !important;
     }
+    .moved-text marquee{
+        padding: 5px;
+    }
+    .moved-text {
+        height: 19px;
+    }
     ul.submenu{
         display: none;
     }
