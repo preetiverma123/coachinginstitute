@@ -242,8 +242,8 @@
                                     </ul>
                                 </li>
                                  <li><a href="<?php echo site_url('teachers'); ?>">Our Team</a></li>
-                               <!--  <li><a href="<?php echo site_url('competition-results'); ?>"><?php echo $this->lang->line('competition-results'); ?></a></li> -->
-                                <li><a href="<?php echo 'competition-results'?>">Results<i class="fa fa-caret-down"></i></a>                                       
+                              
+                                <li><a href="javascript:void(0)">Results<i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
                                         <li><a href="<?php echo site_url('competition-results/iit'); ?>"> IIT Achiever</a></li>
                                         <li><a href="<?php echo site_url('competition-results/neet'); ?>"> NEET Achiever</a></li>
