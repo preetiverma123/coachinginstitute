@@ -97,7 +97,7 @@
     <div class="row">
       <div class="col-lg-8 col-md-8">
         <div class="go-heading go-lined">
-          <h3 class="title-section1"><span style="color:#f3861f;">About</span> Origin</h3>
+          <h3 class="title-section1"><span style="color:#f33c1f;">About</span> Origin</h3>
         </div>
           <div class="directorWrapper">
            <div class="row go-directors">
@@ -164,37 +164,41 @@
                      
 
                       <div class="row">
-                        <div class="notice-single col-lg-12">
-                         <div class="owl-carousel" id="notice-board">
-                            
-                          <?php foreach($notices as $obj){ ?>  
-                             <div class="item">             
-                              <div class="notice-title">
-                                  <h2><?php echo $obj->title; ?></h2>
-                                  <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
-                              </div>
-                              <div>
-                                  <p><?php echo substr($obj->notice, 0,120); ?>...</p>
-                              </div>
-                              <div class="more-link"><a href="<?php echo site_url('notice-detail/').$obj->id; ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
-                              </div>
-                          <?php } ?>  
-                        </div>   
-                      </div>
-                      <div class="video-single col-lg-12">
-                        <div class="about-school">
-                          <div class="addmission-board">
-                            <span>A</span>dmission <span>O</span>pen
-                          </div>
-                          <div class="owl-carousel" id="addmission-board">
-                            <div class="item">
-                              <div class="addmissionImage">
-                                <img src="assets/images/addmission-2.jpg" alt="admission">
-                              </div>
+                        <div class="col-lg-12">
+                          <div class="notice-single d_papers">
+                            <div class="owl-carousel" id="notice-board">
+                                
+                              <?php foreach($notices as $obj){ ?>  
+                                 <div class="item">             
+                                  <div class="notice-title">
+                                      <h2><?php echo $obj->title; ?></h2>
+                                      <h3><i class="fa fa-calendar"></i>  <?php echo date('M j, Y', strtotime($obj->date)); ?> </h3>
+                                  </div>
+                                  <div>
+                                      <p><?php echo substr($obj->notice, 0,120); ?>...</p>
+                                  </div>
+                                  <div class="more-link"><a href="<?php echo site_url('notice-detail/').$obj->id; ?>" class="btn-link"><?php echo $this->lang->line('read_more'); ?> <i class="fa fa-long-arrow-right"></i></a></div>
+                                  </div>
+                              <?php } ?>  
+                            </div> 
+                          </div>  
+                        </div>
+                      <div class="col-lg-12">
+                        <div class="video-single d_papers">
+                          <div class="about-school">
+                            <div class="addmission-board">
+                              <span>A</span>dmission <span>O</span>pen
                             </div>
-                            <div class="item">
-                              <div class="addmissionImage">
-                                <img src="assets/images/addmission-1.jpg" alt="admission">
+                            <div class="owl-carousel" id="addmission-board">
+                              <div class="item">
+                                <div class="addmissionImage">
+                                  <img src="assets/images/addmission-2.jpg" alt="admission">
+                                </div>
+                              </div>
+                              <div class="item">
+                                <div class="addmissionImage">
+                                  <img src="assets/images/addmission-1.jpg" alt="admission">
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -917,7 +921,7 @@
                 items: 2
               },
               991: {
-                  items: 3
+                  items: 4
               }
             }
           });

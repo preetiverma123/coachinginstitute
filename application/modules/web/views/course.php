@@ -30,7 +30,7 @@
 		
             <div class="container">
             	<div class="course-head">
-					<h3 class="text-center"><span style="color: #f3861f;">Benefits</span> of Course</h3>
+					<h3 class="text-center"><span style="color: #f33c1f;">Benefits</span> of Course</h3>
 				</div>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 marginBox">
