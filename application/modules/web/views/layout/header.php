@@ -9,7 +9,14 @@
                         <a href="tel:<?php echo $settings->phone; ?>"><i class="fa fa-phone"></i> <?php echo $settings->phone; ?></a>
                     </p>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">                            
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="moved-text">
+                        <a href="">
+                            <marquee onmouseover="this.stop();" onmouseout="this.start();">We are launching an app for students</marquee>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12">                            
                     <!-- <div class="top-menu">
                         <ul>
                             <li><a href="<?php echo site_url('admission'); ?>"><?php echo $this->lang->line('admission'); ?></a></li>
@@ -26,6 +33,7 @@
                         </ul>
                     </div> -->
                     <div class="top-menu">
+                        
                         <ul>
                             <li><a href="#careerModal" data-toggle="modal">Career</a></li>
                             <li>|</li>
