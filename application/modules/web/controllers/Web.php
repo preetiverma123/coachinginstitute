@@ -167,9 +167,9 @@ class Web extends CI_Controller {
         $this->layout->view('news', $this->data);
     }
 
-    public function competition_results() {
+    public function competition_results($type) {
 
-         $query = $this->db->query("SELECT * from competition_results");
+        $query = $this->db->query("SELECT * from competition_results where achiever_type = '".$type."'");
         $results= $query->result();
             
 

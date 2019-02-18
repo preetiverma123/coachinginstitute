@@ -269,6 +269,7 @@ class Course extends MY_Controller {
         $items[] = 'name';
         $items[] = 'type';
         $items[] = 'description';
+        $items[] = 'stream';
         $items[] = 'class_description';
 
         $data = elements($items, $_POST);

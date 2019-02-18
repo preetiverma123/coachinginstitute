@@ -74,7 +74,7 @@ $route['apply-online'] = 'web/apply';
 
 $route['addApplication'] = 'web/addApplication';
 
-$route['competition-results'] = 'web/competition_results';
+$route['competition-results/(:any)'] = 'web/competition_results/$1';
 
 
 $route['courses/(:any)'] = 'web/courses/$1';
