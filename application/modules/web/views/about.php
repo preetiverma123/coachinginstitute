@@ -32,7 +32,7 @@
                 <p>
                 <?php
                
-                 $var = htmlspecialchars_decode($about->page_description); echo $var; ?>
+                 $var = htmlspecialchars_decode(htmlentities($about->page_description)); echo $var; ?>
                 </p>
             </div>
           </div>

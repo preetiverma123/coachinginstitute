@@ -226,7 +226,9 @@
           <?php foreach($galleries as $obj){?>
             <!-- <div class="gallery-item gi-big set-bg" data-setbg="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>"> -->
               <div class="galleryImg">
+                <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>">
                 <img src="<?php echo UPLOAD_PATH; ?>/gallery/<?php echo $obj->image; ?>" alt="person">
+                </a>
                 <!-- <a class="img-popup" href="<?php echo site_url('gallery-image/'.$obj->id); ?>"></a> -->
               </div>
             <!-- </div> -->

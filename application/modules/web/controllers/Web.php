@@ -7,10 +7,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @type            : Class
  * @class name      : Web
  * @description     : Manage frontend website.  
- * @author          : Codetroopers Team 	
+ * @author          : Codetroopers Team     
  * @url             : https://themeforest.net/user/codetroopers      
- * @support         : yousuf361@gmail.com	
- * @copyright       : Codetroopers Team	 	
+ * @support         : yousuf361@gmail.com   
+ * @copyright       : Codetroopers Team     
  * ********************************************************** */
 
 class Web extends CI_Controller {
@@ -21,7 +21,7 @@ class Web extends CI_Controller {
         parent::__construct();
         $this->load->model('Web_Model', 'web', true);        
         $this->data['settings'] = $this->web->get_single('settings', array('status' => 1));
-        $this->data['about'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'about-us'), '', '', '', 'id', 'ASC');
+        $this->data['about'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'origin'), '', '', '', 'id', 'ASC');
         $this->data['theme'] = $this->web->get_single('themes', array('is_active' => 1));
         $this->data['sliders'] = $this->web->get_list('sliders', array('status' => 1), '', '', '', 'id', 'ASC');
         $this->data['director_message'] = $this->web->get_single('pages', array('status' => 1, 'page_slug'=>'director-message'), '', '', '', 'id', 'ASC');
@@ -102,7 +102,7 @@ class Web extends CI_Controller {
         $this->data['teachers'] = $this->web->get_teacher_list();
         $this->data['galleries'] = $this->web->get_list('galleries', array('status'=>1, 'is_view_on_web'=>1), '', '', '', 'id', 'DESC');
         $this->data['reviews'] = $this->web->get_list('reviews', array('status' => 1), '', '', '', 'id', 'ASC');
-        
+
         ///StudentsCount
         $this->db->select('*');
         $this->db->from('students');
