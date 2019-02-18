@@ -1347,10 +1347,10 @@ button.btn.btn-primary.btn-blue {
         font-size: 20px !important;
     }
     .moved-text marquee{
-        padding: 5px;
+        padding: 5px !important;
     }
     .moved-text {
-        height: 19px;
+        height: 19px !important;
     }
     ul.submenu{
         display: none;
@@ -1371,12 +1371,12 @@ button.btn.btn-primary.btn-blue {
         padding-bottom: 30px;
     }
     ul.submenu-course{
-        left: 5% !important;
+        left: 4% !important;
         display: none;
         height: 200px;
          overflow-y: scroll;
         width: 90% !important;
-        top: 70% !important;
+        top: 57% !important;
     }
     ul.submenu-course .inline-items-menu{
         float: unset !important;

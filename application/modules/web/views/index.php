@@ -919,8 +919,13 @@
                   items: 1,
                   dots :false
               },
+              480: {
+                items: 2,
+                margin: 0
+              },
               767:{
-                items: 2
+                items: 2,
+                margin: 0
               },
               991: {
                   items: 4
