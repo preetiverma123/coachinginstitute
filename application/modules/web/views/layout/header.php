@@ -156,14 +156,14 @@
                                     </ul>
                                 </li>
                                 <!-- end about -->
-                                 <li class="courseMenu"><a href="<?php echo site_url('courses'); ?>" class="hidemenu1">Course <i class="fa fa-caret-down"></i></a>                                       
+                                 <li class="courseMenu"><a href="javascript:void(0);" class="hidemenu1">Course <i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu submenu-course clearfix">
                                         <li class="inline-items-menu"><a href="javascript:void(0);" class="course-dropdown">Target Course</a>
 
                                             <ul class="course-dropdown-sub">
                                                 <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='target'){ ?>
-                                                    <li><a href="javascript:void(0);"><?php echo $course->name;?></a></li>
+                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
                                                    <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
                                                     <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
                                                      <?php }?>
@@ -174,7 +174,7 @@
                                             <ul class="course-dropdown-sub">
                                                  <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='academic'){ ?>
-                                                    <li><a href="javascript:void(0);"><?php echo $course->name;?></a></li>
+                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
                                                    <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
                                                     <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
                                                      <?php }?>
@@ -186,7 +186,7 @@
                                             <ul class="course-dropdown-sub">
                                                  <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='special'){ ?>
-                                                    <li><a href="javascript:void(0);"><?php echo $course->name;?></a></li>
+                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
                                                    <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
                                                     <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
                                                      <?php }?>

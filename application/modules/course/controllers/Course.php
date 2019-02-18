@@ -196,6 +196,7 @@ class Course extends MY_Controller {
 
         $this->form_validation->set_rules('name', $this->lang->line('name'), 'trim|required');
         $this->form_validation->set_rules('type', $this->lang->line('type'), 'trim|required');
+        $this->form_validation->set_rules('class_description', $this->lang->line('class_description'), 'trim|required');
         $this->form_validation->set_rules('description', $this->lang->line('description'), 'trim|required');
         $this->form_validation->set_rules('photo', $this->lang->line('photo'), 'trim|callback_photo');
     }
@@ -268,7 +269,7 @@ class Course extends MY_Controller {
         $items[] = 'name';
         $items[] = 'type';
         $items[] = 'description';
-      
+        $items[] = 'class_description';
 
         $data = elements($items, $_POST);
 

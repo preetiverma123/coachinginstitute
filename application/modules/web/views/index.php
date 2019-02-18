@@ -35,6 +35,7 @@
         <div class="panel panel-head">
           <div class="panel-heading"><h3 class="panel-title">Admission @ Origin Career Institute</h3></div>
         </div>
+
         <div class="scrollDiv scroll-wrapper list-group" style="position: relative;">
           <div class="scrollbar" id="style-3">
             <div class="force-overflow">
@@ -43,36 +44,20 @@
                   <i class="fa fa-caret-right"></i>Admission Course
                 
                   <ul class="style-course">
-                    <li>
-                      <a href="javascript:void(0);">
-                      <b> <i class="fa fa-caret-right"></i>JEE(Main + advanced)</b>
-                      <br>
-                      (Class XII<sup>th</sup> passout)
-                    </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">
-                      <b> <i class="fa fa-caret-right"></i>NEET/AIIMS</b>
-                      <br>
-                      (Class XII<sup>th</sup> passout)
-                    </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0);">
-                      <b> <i class="fa fa-caret-right"></i>Foundation</b>
-                      <br>
-                      (Class XI<sup>th</sup> & XII<sup>th</sup>)
-                    </a>
-                    </li>
-                     <li>
-                      <a href="javascript:void(0);">
-                      <b> <i class="fa fa-caret-right"></i>Prefoundation</b>
-                      <br>
-                      (Class VIII<sup>th</sup> & IX<sup>th</sup> & X<sup>th</sup>)
-                    </a>
-                    </li>
+                    <?php if(!empty($courses)){?>
+                      <?php foreach($courses as $course){?>
+                        <li>
+                          <a href="<?php echo site_url().'courses/'.$course->id; ?>">
+                            <b> <i class="fa fa-caret-right"></i><?php echo (!empty($course->name))?$course->name:'';?></b>
+                            <br>
+                            <?php echo (!empty($course->class_description))?$course->class_description:'';?>
+                          </a>
+                        </li>
+                      <?php }?>
+                    <?php }?>
                    
                   </ul>
+
                 </li>
 
                <!--  <li class="list-group-item">

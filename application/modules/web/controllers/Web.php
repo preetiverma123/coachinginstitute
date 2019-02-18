@@ -402,9 +402,9 @@ class Web extends CI_Controller {
         $this->layout->view('terms', $this->data);
     }
 
-    public function courses() {
+    public function courses($id) {
 
-       
+       $this->data['courseDetails'] = $this->web->get_single('courses', array('status' => 1, 'id'=>$id), '', '', '', 'id', 'ASC');
         $this->data['list'] = TRUE;
         $this->layout->title('course' . ' | ' . SMS);
         $this->layout->view('course', $this->data);
@@ -651,7 +651,7 @@ class Web extends CI_Controller {
 
         $this->form_validation->set_rules('name', $this->lang->line('name'), 'trim|required');
         $this->form_validation->set_rules('phone', $this->lang->line('phone'), 'trim|required');
-        $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required|valid_email');
+        $this->form_validation->set_rules('email', $this->lang->line('email'), 'trim|required|valid_email|xss_clean');
 //|callback_email,|callback_resume
         $this->form_validation->set_rules('resume', $this->lang->line('resume'), 'trim|required');
 

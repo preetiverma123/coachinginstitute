@@ -47,6 +47,7 @@
                                        
                                         <th><?php echo $this->lang->line('photo'); ?></th>
                                          <th><?php echo $this->lang->line('name'); ?></th>
+                                         <th><?php echo 'Class Description' ?></th>
                                         <th><?php echo $this->lang->line('description'); ?></th>
                                         
                                         <th><?php echo $this->lang->line('action'); ?></th>                                            
@@ -65,7 +66,7 @@
                                                 <?php } ?>
                                             </td>
                                             <td><?php echo ucfirst($obj->name); ?></td>
-                                         
+                                            <td><?php echo !empty($obj->class_description)?$obj->class_description:''; ?></td>
                                             <td><?php echo $obj->description; ?></td>
                                            
                                             <td>
@@ -127,7 +128,14 @@
                                         <div class="help-block"><?php echo form_error('photo'); ?></div>
                                     </div>
                                 </div>
-                                                                
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="class_description"><?php echo 'Class Description' ?><span class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <textarea  class="form-control col-md-7 col-xs-12"  name="class_description"  id="class_description" placeholder="<?php echo 'Class Description' ?>"><?php echo isset($post['class_description']) ?  $post['class_description'] : ''; ?></textarea>
+                                        <div class="help-block"><?php echo form_error('class_description'); ?></div>
+                                    </div>
+                                </div>
+
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?><span class="required">*</span></label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -195,11 +203,19 @@
                                     </div>
                                 </div>
                                 
+                                <div class="item form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="class_description"><?php echo 'Class Description' ?><span class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <textarea  class="form-control col-md-7 col-xs-12"  name="class_description"  id="class_description" placeholder="<?php echo 'Class Description' ?>"><?php echo isset($course->class_description) ?  $course->class_description : $post['class_description']; ?></textarea>
+                                        <div class="help-block"><?php echo form_error('class_description'); ?></div>
+                                    </div>
+                                </div>
                                 
+
                                 <div class="item form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="description"><?php echo $this->lang->line('description'); ?><span class="required">*</span></label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($course->description) ?  $course->description : $post['description']; ?></textarea>
+                                        <textarea  class="form-control col-md-7 col-xs-12"  name="description"  id="description" placeholder="<?php echo $this->lang->line('description'); ?>"><?php echo isset($course->description) ?  $course->description : ''; ?></textarea>
                                         <div class="help-block"><?php echo form_error('description'); ?></div>
                                     </div>
                                 </div>
@@ -246,7 +262,13 @@
                                         <?php } ?>
                                     </div>
                                 </div>
-                                
+                                  <div class="item form-group">
+                                    <label class="col-md-3 col-sm-3 col-xs-4"><?php echo 'Class Description' ?></label>
+                                    <div class="col-md-9 col-sm-9 col-xs-8">
+                                    : <?php echo $course->class_description; ?>
+                                    </div>
+                                </div>
+
                                 <div class="item form-group">
                                     <label class="col-md-3 col-sm-3 col-xs-4"><?php echo $this->lang->line('description'); ?></label>
                                     <div class="col-md-9 col-sm-9 col-xs-8">
