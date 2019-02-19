@@ -1,4 +1,3 @@
- 
 <section class="slider_area">
   <div class="container-fluid">
   <div class="row">
@@ -8,8 +7,6 @@
             <?php $slider_str = ''; 
             foreach($sliders as $obj){ ?>
               <?php $slider_str = "assets/uploads/slider/".$obj->image; 
-
-
               ?>
                 <div class="item">
                   <img src="<?php echo  $slider_str;?>" class="img-responsive" alt="slider">
@@ -141,7 +138,6 @@
                 $this->load->helper('text');
                 $desc= strip_tags($executive_message->page_description);
                 echo word_limiter($desc,15);
-
                 ?>
                 </p>
               </div>
@@ -553,30 +549,36 @@
     <div class="row justify-content-center">
       <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
         <div class="site-title">
-            <h3 class="title-section1">Our Testimonials</h3>
+            <h3 class="title-section1">Our Reviews</h3>
         </div>
         <div id="owl-testimonials" class="owl-carousel">
-          <div class="testimonial clearfix">
-            <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
-              <div class="testimonial__info">
-                <span class="testimonial__author">Nicky Papaiya</span>
-                <!-- <span class="testimonial__company">Surat</span> -->
-              </div>
-              <div class="testimonial__body">
-                <p class="testimonial__text">“Got the Saree for my mom on her Birthday &amp; she just loved the Saree. Very nice color combination &amp; easy to wear anytime. Nice collection, will shop again with Vastra.”</p>
-              </div>
-          </div>
-          <div class="testimonial clearfix">
-              <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
-              <div class="testimonial__info">
-                <span class="testimonial__author">Nicky Papaiya</span>
-                <!-- <span class="testimonial__company">Surat</span> -->
-              </div>
-              <div class="testimonial__body">
-                <p class="testimonial__text">“Got the Saree for my mom on her Birthday &amp; she just loved the Saree. Very nice color combination &amp; easy to wear anytime. Nice collection, will shop again with Vastra.”</p>
-              </div>
+          <?php foreach($reviews as $key => $value) {?>
+            <div class="testimonial clearfix">
+              <?php if($value->photo==NULL){?>
+                <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
+              <?php }else{?>
+                <img src="<?php echo UPLOAD_PATH; ?>/review-photo/<?php echo $value->photo; ?>" alt="photo" class="testimonial__img">
+              <?php }?>
+                <div class="testimonial__info">
+                  <span class="testimonial__author"><?php echo $value->name;?></span>
+                  <!-- <span class="testimonial__company">Surat</span> -->
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">“<?php echo $value->review;?>”</p>
+                </div>
             </div>
-          </div>
+          <?php }?>
+          <!-- <div class="testimonial clearfix">
+            <img src="assets/images/avatardefault.png" alt="photo" class="testimonial__img">
+            <div class="testimonial__info">
+              <span class="testimonial__author">Nicky Papaiya</span>
+             
+            </div>
+            <div class="testimonial__body">
+              <p class="testimonial__text">“Got the Saree for my mom on her Birthday &amp; she just loved the Saree. Very nice color combination &amp; easy to wear anytime. Nice collection, will shop again with Vastra.”</p>
+            </div>
+          </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -744,7 +746,6 @@
                   </div>
                   
                 </div>
-
             <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
               <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 mix plots house">
                 <div class="portfolio-item">
@@ -947,9 +948,7 @@
               }
             }
           });
-
           /*our gallery*/
-
           $('#galleryId').owlCarousel({
           
             loop: true,
@@ -977,5 +976,4 @@
             }
           });
        }); 
-
  </script>

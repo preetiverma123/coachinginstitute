@@ -11,13 +11,10 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="moved-text">
-<<<<<<< HEAD
-                        <a href="">
-                            <marquee onmouseover="this.stop();">We are launching an app for students</marquee>
-=======
+
                         <a href="https://play.google.com/store/apps/details?id=co.classplus.origin">
                             <marquee onmouseover="this.stop();" onmouseout="this.start();">We are launching an app for students, Please click on this link to download the app!</marquee>
->>>>>>> 44dc934fc88995608678f447d94c1f5b481fcd32
+
                         </a>
                     </div>
                 </div>
