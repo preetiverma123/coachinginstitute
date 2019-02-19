@@ -13,7 +13,8 @@
                     <div class="moved-text">
 
                         <a href="https://play.google.com/store/apps/details?id=co.classplus.origin">
-                            <marquee onmouseover="this.stop();" onmouseout="this.start();">We are launching an app for students, Please click on this link to download the app!</marquee>
+
+                            <marquee onmouseover="this.stop();" onmouseout="this.start();">We are launching an app for students, Please click on this link to download the app!</marquee> 
 
                         </a>
                     </div>
@@ -178,12 +179,12 @@
 
                                             <ul class="course-dropdown-sub">
                                             
-                                                    <li><a href="javascript:void(0);">Engineering</a>
+                                                    <li><a href="javascript:void(0);"><i class="fa fa-chevron-right"></i> Engineering</a>
                                                         <ul class="course-dropdown-sub">
                                                             <?php foreach($courses as $course){?>
                                                                 <?php if($course->type=='target'){ ?>
                                                                     <?php if($course->stream!=NULL && $course->stream=='engineering'){?>
-                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><i class="fa fa-chevron-right"></i><?php echo $course->name;?></a></li>
                                                                
                                                                     <?php }?>
                                                                  <?php }?>
@@ -196,12 +197,12 @@
 
                                                     </li>
 
-                                                      <li><a href="javascript:void(0);">Medicals</a>
+                                                      <li><a href="javascript:void(0);"><i class="fa fa-chevron-right"></i> Medicals</a>
                                                         <ul class="course-dropdown-sub">
                                                             <?php foreach($courses as $course){?>
                                                                 <?php if($course->type=='target'){ ?>
                                                                     <?php if($course->stream!=NULL && $course->stream=='medicals'){?>
-                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                                        <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><i class="fa fa-chevron-right"></i> <?php echo $course->name;?></a></li>
                                                               
                                                                     <?php }?>
                                                                  <?php }?>
@@ -218,7 +219,7 @@
                                                     <?php foreach($courses as $course){?>
                                                         <?php if($course->type=='target' && $course->stream==NULL){ ?>
                                                   
-                                                            <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                            <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><i class="fa fa-chevron-right"></i><?php echo $course->name;?></a></li>
                                                               
                                                         <?php }?>
                                                     <?php }?>
@@ -231,7 +232,7 @@
                                             <ul class="course-dropdown-sub">
                                                  <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='academic'){ ?>
-                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><i class="fa fa-chevron-right"></i><?php echo $course->name;?></a></li>
                                                    <!--  <li><a href="javascript:void(0);">JEE (Mains)</a></li>
                                                     <li><a href="javascript:void(0);">NEET/AIIMS/JIPMER</a></li> -->
                                                      <?php }?>
@@ -243,7 +244,7 @@
                                             <ul class="course-dropdown-sub">
                                                  <?php foreach($courses as $course){?>
                                                     <?php if($course->type=='special'){ ?>
-                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><?php echo $course->name;?></a></li>
+                                                    <li><a href="<?php echo site_url().'courses/'.$course->id; ?>"><i class="fa fa-chevron-right"></i><?php echo $course->name;?></a></li>
                                                    
                                                      <?php }?>
                                                 <?php }?>
@@ -254,7 +255,7 @@
                                  <li><a href="<?php echo site_url('teachers'); ?>">Our Team</a></li>
                                  <li><a href="<?php echo site_url('galleries'); ?>"><?php echo $this->lang->line('gallery'); ?></a></li>
                               
-                                <li><a href="javascript:void(0)">Results<i class="fa fa-caret-down"></i></a>                                       
+                                <li><a href="javascript:void(0)" class="hidemenu">Results<i class="fa fa-caret-down"></i></a>                                       
                                     <ul class="submenu">
                                         <li><a href="<?php echo site_url('competition-results/iit'); ?>"> IIT Achiever</a></li>
                                         <li><a href="<?php echo site_url('competition-results/neet'); ?>"> NEET Achiever</a></li>

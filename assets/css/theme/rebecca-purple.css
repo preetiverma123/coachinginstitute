@@ -49,7 +49,7 @@ h6{
 }
 .galleryImg img{
     width: 200px;
-    height: 200px;
+    height: 220px;
 }
 /*
  *  STYLE 3
@@ -721,7 +721,12 @@ ul.course-dropdown-sub {
     box-shadow: 5px 8px 5px 0 #00000014;
 }
 .main-menu ul li ul.submenu li {
-    border-top: 1px solid #d4d4d4;
+    /*border-top: 1px solid #d4d4d4;*/
+}
+ul.course-dropdown-sub li i {
+    color: #fff;
+    font-size: 11px;
+    padding-right: 5px;
 }
 .eventDetailWrap .event-img{
     height: unset;
